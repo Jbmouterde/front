@@ -3,20 +3,18 @@
 
 <ul> 
   <li *ngFor="let oneArticle of articles">
-    <h3> {{oneArticle.title}}</h3>
-      <p> {{oneArticle.email}}</p> 
- <!-- <img src="{{onePhone.image}}"/>  -->
+    <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
+    <p>Organization : {{oneArticle.organization}} about : {{oneArticle.type}}  </p> 
+<p>{{oneArticle.reportChange}} </p>
+    <p>Date : {{oneArticle.date}} in : {{oneArticle.location}}  </p> 
+    <p>email of writter :{{oneArticle.email}}</p> 
+
+      <p> {{oneArticle.description}}</p> 
+
+ <img src="{{oneArticle.imageUrl}}"/> 
+
 <!-- <a [routerLink]="['/phone', onePhone._id]"> See Details</a> -->
   </li>
 </ul>
 
-
-<ul> 
-  <li *ngFor="let oneArticle of articles">
-    <h3> {{oneArticle.title}}</h3>
-      <p> {{oneArticle.email}}</p> 
- <!-- <img src="{{onePhone.image}}"/>  -->
-<!-- <a [routerLink]="['/phone', onePhone._id]"> See Details</a> -->
-  </li>
-</ul>
 

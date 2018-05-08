@@ -23,7 +23,13 @@ getList(){
 export class Article {
   _id : string; 
   title : string; 
-  date : string; 
-  type : string; 
-  email : string
+  date : Date; 
+  description : string;
+  nameWritter : string;
+  location : string;
+  email : string;
+  imageUrl : string ; 
+  organization : string; 
+  reportChange : string; 
+  type : string ; 
 };
