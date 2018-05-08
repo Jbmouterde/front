@@ -12,6 +12,7 @@ import { AddFormComponent } from './add-form/add-form.component';
 import { ArticleService } from './services/article.service';
 import { ReportsPipe } from './pipes/reports.pipe';
 
+import { DetailsArticleComponent } from './details-article/details-article.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReportsPipe } from './pipes/reports.pipe';
     AppComponent,
     ArticleDisplayComponent,
     AddFormComponent,
-    ReportsPipe
+    ReportsPipe,
+    DetailsArticleComponent
   ],
   imports: [
     BrowserModule,
