@@ -1,2 +1,105 @@
 <h2>Add a Report</h2>
 
+<br>
+<hr>
+<div class="container">
+  <h3>Report Form</h3>
+  <br>
+  <form>
+    <div class="form-group">
+      <label for="title">
+        Report Title
+        <input type="text" class="form-control"required>
+      </label>
+    </div>
+
+    <div class="form-group">
+        <select for="type">
+            <option value="">Type of Report</option>  
+            
+              <option value="Personal Information">Personal Information</option>
+              <option value="Interview">Interview</option>
+              <option value="Project">Project</option>
+              <option value="Story">Story</option>
+              <option value="Publication">Publication</option>
+          </select>
+      </div>
+
+    <div class="form-group">
+      <label for="date">
+        Date
+        <input type="date" class="form-control">
+      </label>
+    </div>
+
+
+    <div class="form-group">
+        <label for="description">
+          Description
+          <br>
+          <textarea name="description"  cols="30" rows="10"></textarea>
+        </label>
+      </div>
+
+      <div class="form-group">
+          <label for="nameWritter">
+            Your Name
+            <input type="nameWritter" class="form-control">
+          </label>
+        </div>
+
+        <div class="form-group">
+            <label for="email">
+              Email
+              <input type="email" class="form-control">
+            </label>
+          </div>
+
+
+        <div class="form-group">
+            <label for="location">
+              Location
+              <input type="text" class="form-control">
+            </label>
+          </div>
+
+          <div class="form-group">
+              <label for="imageUrl">
+                Image
+                <input type="imageUrl" class="form-control">
+              </label>
+          </div>
+
+
+          <div class="form-group">
+                <select for="organization">
+                  <option value="">Organization</option>  
+                  
+                    <option value="World Wildlife Fund">World Wildlife Fund</option>
+                    <option value="Centra Terra Viva">Centra Terra Viva</option>
+                    <option value="Giz">Giz</option>
+                    <option value="World Ressource institute">World Ressource institute</option>
+                    <option value="Other">Other</option>
+                </select>
+          </div>
+
+          <div class="form-group">
+              <select for="reportChange">
+                  <option value="">ReportChange</option>  
+                  
+                    <option value="Increased rainfall">Increased rainfall</option>
+                    <option value="Decreased rainfall">Decreased rainfall</option>
+                    <option value="Changes in timing of seasons">Changes in timing of seasons</option>
+                    <option value="Storms">Storms</option>
+                    <option value="Loss of water source">Loss of water source</option>
+                    <option value="Wildlfires">Wildlfires</option>
+                    <option value="none">None</option>
+
+                </select>
+            </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
