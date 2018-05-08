@@ -1,5 +1,7 @@
 <h2> ARTICLE DISPLAY</h2>
 
+<input type="text" placeholder="search for an article"/>
+ 
 
 <ul> 
   <li *ngFor="let oneArticle of articles">
@@ -13,7 +15,7 @@
 
  <img src="{{oneArticle.imageUrl}}"/> 
 
-<!-- <a [routerLink]="['/phone', onePhone._id]"> See Details</a> -->
+<a [routerLink]="['/article', oneArticle._id]"> See Details</a>
   </li>
 </ul>
 
