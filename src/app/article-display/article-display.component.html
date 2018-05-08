@@ -1,13 +1,16 @@
-
+<h2>Reports Display</h2>
+<div id="my-map" #gmap style="width:40%;height:400px">
+</div>
 
 <div class="reports-container">
 
-    <h2>Reports Display</h2>
+    
 
   <label>
       Search For Reports
       <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
   </label>
+  <button class="btn btn-primary"> <a routerLink="/add-report">Add a report</a> </button>
   
    <br>
    <br>
@@ -23,8 +26,8 @@
         <p> {{oneArticle.description}}</p> 
   
    <img src="{{oneArticle.imageUrl}}"/> 
-  
-  <a [routerLink]="['/article', oneArticle._id]"> See Details</a>
+  <button>
+  <a [routerLink]="['/article', oneArticle._id]"> See Details</a></button>
     </li>
   </ul>
 </div>

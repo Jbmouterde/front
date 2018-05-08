@@ -5,8 +5,13 @@ img {
 
 .reports-container {
   padding-left: 30px; 
+  float: left;
 }
 
 #report-seach {
   border-radius: 6px;
+}
+
+#my-map {
+  float: left;
 }
