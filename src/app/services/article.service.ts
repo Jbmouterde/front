@@ -17,6 +17,12 @@ getList(){
   .get('http://localhost:3000/api/articles')
   .toPromise();
 }
+getDetails(articleId){
+  return this.ajaxTruc
+  .get(`http://localhost:3000/api/articles/${articleId}`)
+  .toPromise();
+}
+
 
 }
 
