@@ -1,0 +1,12 @@
+img {
+  height: 300px;
+  width: 400px;
+}
+
+.reports-container {
+  padding-left: 30px; 
+}
+
+#report-seach {
+  border-radius: 6px;
+}

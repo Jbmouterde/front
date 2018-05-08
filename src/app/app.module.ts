@@ -10,13 +10,16 @@ import { AppComponent } from './app.component';
 import { ArticleDisplayComponent } from './article-display/article-display.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { ArticleService } from './services/article.service';
+import { ReportsPipe } from './pipes/reports.pipe';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleDisplayComponent,
-    AddFormComponent
+    AddFormComponent,
+    ReportsPipe
   ],
   imports: [
     BrowserModule,

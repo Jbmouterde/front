@@ -1,22 +1,32 @@
-<h2> ARTICLE DISPLAY</h2>
 
-<input type="text" placeholder="search for an article"/>
- 
 
-<ul> 
-  <li *ngFor="let oneArticle of articles">
-    <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
-    <p>Organization : {{oneArticle.organization}} about : {{oneArticle.type}}  </p> 
-<p>{{oneArticle.reportChange}} </p>
-    <p>Date : {{oneArticle.date}} in : {{oneArticle.location}}  </p> 
-    <p>email of writter :{{oneArticle.email}}</p> 
+<div class="reports-container">
 
-      <p> {{oneArticle.description}}</p> 
+    <h2>Reports Display</h2>
 
- <img src="{{oneArticle.imageUrl}}"/> 
-
-<a [routerLink]="['/article', oneArticle._id]"> See Details</a>
-  </li>
-</ul>
+  <label>
+      Search For Reports
+      <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
+  </label>
+  
+   <br>
+   <br>
+  
+  <ul> 
+    <li *ngFor="let oneArticle of (articles | reports : userInput)">
+      <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
+      <p>Organization : {{oneArticle.organization}} about : {{oneArticle.type}}  </p> 
+  <p>{{oneArticle.reportChange}} </p>
+      <p>Date : {{oneArticle.date}} in : {{oneArticle.location}}  </p> 
+      <p>email of writter :{{oneArticle.email}}</p> 
+  
+        <p> {{oneArticle.description}}</p> 
+  
+   <img src="{{oneArticle.imageUrl}}"/> 
+  
+  <a [routerLink]="['/article', oneArticle._id]"> See Details</a>
+    </li>
+  </ul>
+</div>
 
 
