@@ -10,7 +10,6 @@ export class ArticleDisplayComponent implements OnInit {
 
   articles : Article[] = [];
 
-
   constructor(
     public apiTruc : ArticleService
   ) { }
