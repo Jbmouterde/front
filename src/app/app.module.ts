@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ArticleService } from './article.service';
+
 import { ArticleDisplayComponent } from './article-display/article-display.component';
 import { AddFormComponent } from './add-form/add-form.component';
+import { ArticleService } from './services/article.service';
 
 
 @NgModule({
