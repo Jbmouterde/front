@@ -13,6 +13,9 @@ import { ArticleService } from './services/article.service';
 import { ReportsPipe } from './pipes/reports.pipe';
 
 import { DetailsArticleComponent } from './details-article/details-article.component';
+import { UserService } from './services/user.service';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import { DetailsArticleComponent } from './details-article/details-article.compo
     ArticleDisplayComponent,
     AddFormComponent,
     ReportsPipe,
-    DetailsArticleComponent
+    DetailsArticleComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,7 @@ import { DetailsArticleComponent } from './details-article/details-article.compo
     HttpClientModule,
     FormsModule
   ],
-  providers: [ArticleService],
+  providers: [ArticleService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

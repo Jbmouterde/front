@@ -23,14 +23,18 @@
             MENU 
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-             <a class="dropdown-item" href="/forms">Créer un formulaire</a>
-            <a class="dropdown-item" href="/logout">Se deconnecter</a>
+              <span *ngIf="userTruc.currentUser">
+             <a class="dropdown-item" routerLink="/forms">Créer un formulaire</a>
+            <a class="dropdown-item" (click)="logoutClick()" routerLink="/logout">Log Out</a>
+          </span>
+          <span *ngIf="!userTruc.currentUser">
 
-            <a class="dropdown-item" href="/login">Se connecter</a>
-            <a class="dropdown-item" href="/signup">S'enregistrer</a>
- 
+            <a class="dropdown-item" routerLink="/login">Log In</a>
+            <a class="dropdown-item" routerLink="/signup">Sign Up</a>
+          </span>
             <div class="dropdown-divider"></div>
+            <b> {{userTruc.currentUser.username}}</b>
+
             <!-- <a class="dropdown-item" href="/setting/{{blahUser.Id}}">Mes informations personnelles</a> -->
             
           </div>
