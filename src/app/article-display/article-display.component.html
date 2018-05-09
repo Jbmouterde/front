@@ -1,36 +1,33 @@
 <h2>Reports Display</h2>
-<div id="my-map" #gmap style="width:40%;height:400px">
+<div id="my-map" #gmap style="width:40%;height:400px;">
 </div>
 
-  <label>
-      Search For Reports
-      <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
-  </label>
-  <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
-  <br>
-  <br>
+<label>
+  Search For Reports
+  <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
+</label>
+<button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
+<br>
+<br>
 
 <div class="reports-container">
-
   
   
-
+ 
   <ul> 
-    <li *ngFor="let oneArticle of (articles | reports : userInput)">
-      <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
-      <p>Organization : {{oneArticle.organization}}</p>
-      <!-- </p> about : {{oneArticle.type}}  </p>  -->
-      <!-- <p>{{oneArticle.reportChange}} </p> -->
-      <!-- <p>Date : {{oneArti cle.date}} in : {{oneArticle.location}}  </p> 
-      <p>email of writter :{{oneArticle.email}}</p> 
-  
-        <p> {{oneArticle.description}}</p> 
-  
-   <img src="{{oneArticle.imageUrl}}"/>  -->
-  <button>
-  <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> See Details</a></button>
-  <hr>
-    </li>
+      <li *ngFor="let oneArticle of (articles | reports : userInput)">
+      <div class="card" style="width: 30rem; height: 10em;  background: #d1ccc0;" >
+          
+          <div class="card-body">
+            <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
+            <p class="card-text">Organization : {{oneArticle.organization}}</p>
+            
+              <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> See Details</a>
+              <br>
+              <br>
+          </div>
+        </div>
+      </li>
   </ul>
 </div>
 

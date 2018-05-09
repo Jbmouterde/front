@@ -36,8 +36,16 @@ label {
 
 #my-map {
   float: left;
-  margin-top: 65px;
-  height: 470px;
+  margin-top: 100px;
+  margin-left: 40px;
+  
+}
+
+
+
+
+.reports-container li {
+  list-style-type: none;
 }
 
 .separator-type, .title-type, .intro-type, .content-type .intro-type p {
