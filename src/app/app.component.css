@@ -1,6 +1,4 @@
-footer {
-  margin-bottom: 0px;
-}
+
 
 #logo {
   padding: 9px;
@@ -9,3 +7,10 @@ footer {
   font-size: 15px;
   border-radius: 8px;
 }
+
+footer{
+clear: both;
+color: wheat;
+background-color : lightgray
+}
+
