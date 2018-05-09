@@ -5,30 +5,30 @@
 <div class="container">
   <h3>Report Form</h3>
   <br>
-  <form>
+  <form (ngSubmit)="articleSubmit()"> 
     <div class="form-group">
       <label for="title">
         Report Title
-        <input type="text" class="form-control"required>
+        <input type="text"[(ngModel)]="formCreds.title"  name="title" class="form-control"required>
       </label>
     </div>
 
     <div class="form-group">
-        <select for="type">
+        <select [(ngModel)]="formCreds.type" name="type"for="type">
             <option value="">Type of Report</option>  
             
-              <option value="Personal Information">Personal Information</option>
-              <option value="Interview">Interview</option>
-              <option value="Project">Project</option>
-              <option value="Story">Story</option>
-              <option value="Publication">Publication</option>
+              <option name="Personal Information" value="Personal Information">Personal Information</option>
+              <option name="Interview" value="Interview">Interview</option>
+              <option name="Project" value="Project">Project</option>
+              <option name="Story" value="Story">Story</option>
+              <option name="Publication" value="Publication">Publication</option>
           </select>
       </div>
 
     <div class="form-group">
       <label for="date">
         Date
-        <input type="date" class="form-control">
+        <input type="date" [(ngModel)]="formCreds.date" name="date" class="form-control">
       </label>
     </div>
 
@@ -37,21 +37,21 @@
         <label for="description">
           Description
           <br>
-          <textarea name="description"  cols="30" rows="10"></textarea>
+          <textarea [(ngModel)]="formCreds.description" name="description"  cols="30" rows="10"></textarea>
         </label>
       </div>
 
       <div class="form-group">
           <label for="nameWritter">
             Your Name
-            <input type="nameWritter" class="form-control">
+            <input type="text" [(ngModel)]="formCreds.nameWritter"  name="nameWritter" class="form-control">
           </label>
         </div>
 
         <div class="form-group">
             <label for="email">
               Email
-              <input type="email" class="form-control">
+              <input type="email" [(ngModel)]="formCreds.email" name="email" class="form-control">
             </label>
           </div>
 
@@ -59,41 +59,41 @@
         <div class="form-group">
             <label for="location">
               Location
-              <input type="text" class="form-control">
+              <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control">
             </label>
           </div>
 
           <div class="form-group">
               <label for="imageUrl">
                 Image
-                <input type="imageUrl" class="form-control">
+                <input type="imageUrl" [(ngModel)]="formCreds.imageUrl" name="imageUrl" class="form-control">
               </label>
           </div>
 
 
           <div class="form-group">
-                <select for="organization">
+                <select [(ngModel)]="formCreds.organization" name="organization" for="organization">
                   <option value="">Organization</option>  
                   
-                    <option value="World Wildlife Fund">World Wildlife Fund</option>
-                    <option value="Centra Terra Viva">Centra Terra Viva</option>
-                    <option value="Giz">Giz</option>
-                    <option value="World Ressource institute">World Ressource institute</option>
-                    <option value="Other">Other</option>
+                    <option name="World Wildlife Fund" value="World Wildlife Fund">World Wildlife Fund</option>
+                    <option name="Centra Terra Viva" value="Centra Terra Viva">Centra Terra Viva</option>
+                    <option name="Giz" value="Giz">Giz</option>
+                    <option name="World Ressource institute" value="World Ressource institute">World Ressource institute</option>
+                    <option name="Other" value="Other">Other</option>
                 </select>
           </div>
 
           <div class="form-group">
-              <select for="reportChange">
+              <select [(ngModel)]="formCreds.reportChange" name="reportChange" for="reportChange">
                   <option value="">ReportChange</option>  
                   
-                    <option value="Increased rainfall">Increased rainfall</option>
-                    <option value="Decreased rainfall">Decreased rainfall</option>
-                    <option value="Changes in timing of seasons">Changes in timing of seasons</option>
-                    <option value="Storms">Storms</option>
-                    <option value="Loss of water source">Loss of water source</option>
-                    <option value="Wildlfires">Wildlfires</option>
-                    <option value="none">None</option>
+                    <option  name="Increased rainfall" value="Increased rainfall">Increased rainfall</option>
+                    <option  name="Decreased rainfall" value="Decreased rainfall">Decreased rainfall</option>
+                    <option  name="Changes in timing of seasons" value="Changes in timing of seasons">Changes in timing of seasons</option>
+                    <option  name="Storms" value="Storms">Storms</option>
+                    <option  name="Loss of water source" value="Loss of water source">Loss of water source</option>
+                    <option  name="Wildlfires" value="Wildlfires">Wildlfires</option>
+                    <option  name="none" value="none">None</option>
 
                 </select>
             </div>
