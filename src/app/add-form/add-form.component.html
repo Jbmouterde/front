@@ -59,7 +59,7 @@
         <div class="form-group">
             <label for="location">
               Location
-              <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control">
+              <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control" onFocus="geolocate()" placeholder="enter a location...">
             </label>
           </div>
 

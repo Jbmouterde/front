@@ -3,17 +3,41 @@ img {
   width: 400px;
 }
 
+h2 {
+margin-top: 40px;
+padding-left: 30px;
+color: darkgreen;
+}
 .reports-container {
   padding-left: 30px; 
   float: left;
+  height: 450px;
 }
 
 #report-seach {
   border-radius: 6px;
+  color: wheat
+  
 }
+
+#report-button {
+  background: darksalmon;
+}
+
+#details-link {
+  color: darksalmon;
+}
+label {
+
+  padding-left: 70px;
+}
+
+  
 
 #my-map {
   float: left;
+  margin-top: 65px;
+  height: 470px;
 }
 
 .separator-type, .title-type, .intro-type, .content-type .intro-type p {
