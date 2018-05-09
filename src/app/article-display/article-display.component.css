@@ -11,7 +11,7 @@ color: darkgreen;
 .reports-container {
   padding-left: 30px; 
   float: left;
-  height: 450px;
+  /* height: 450px; */
 }
 
 #report-seach {
