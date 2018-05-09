@@ -1,6 +1,19 @@
-<h2> Details of the Reports</h2>
+<div class="container">
 
-<h3> {{article?.title}}</h3>
-<p> by {{article?.description}}</p>
+<div class="container vri">
+  <h3> {{article?.title}}</h3>
+<p> written by {{article?.nameWritter}} for <strong>{{article?.organization}}</strong> </p>
+<p> {{article?.description}}</p>
 <img *ngIf="article?.imageUrl" [src]='article?.imageUrl'/> 
 
+<hr>
+<button class="btn"> Share on FaceBook</button>
+<button class="btn"> Get a Shareable Link</button>
+<button class="btn">Dowload</button>
+</div>
+
+<hr> 
+<button class="btn"><a routerLink="/"> Back </a> </button>
+
+
+</div>
