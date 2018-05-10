@@ -17,6 +17,7 @@ import { UserService } from './services/user.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TypePipe } from './pipes/type.pipe';
+import { AllArticlesComponent } from './all-articles/all-articles.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { TypePipe } from './pipes/type.pipe';
     LoginComponent,
     SignupComponent,
     TypePipe,
+    AllArticlesComponent,
     
   ],
   imports: [
