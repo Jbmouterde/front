@@ -1,0 +1,24 @@
+.reports-container li {
+  list-style-type: none;
+}
+
+
+img {
+  width : 0 auto;
+  height : 40vh; 
+  width: 50 wh;
+}
+.container{
+  text-align : center;
+ 
+}
+.vri {
+  border : 2px solid grey; 
+  height : 100%;
+  border-radius : 10px
+}
+button {
+  background: salmon;
+  color: wheat;
+
+}

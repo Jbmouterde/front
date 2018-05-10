@@ -6,6 +6,7 @@ import { DetailsArticleComponent } from './details-article/details-article.compo
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AllArticlesComponent } from './all-articles/all-articles.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path : '', component : ArticleDisplayComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path : 'login', component : LoginComponent},
   { path : 'signup', component : SignupComponent},
   { path : 'articles', component : AllArticlesComponent},
+  { path : 'about', component : AboutComponent},
   { path:  'article/:blahId', component: DetailsArticleComponent}
 
 

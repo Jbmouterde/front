@@ -28,4 +28,5 @@ export class AllArticlesComponent implements OnInit {
     })
   }
 
+
 }

@@ -18,7 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TypePipe } from './pipes/type.pipe';
 import { AllArticlesComponent } from './all-articles/all-articles.component';
-
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,8 @@ import { AllArticlesComponent } from './all-articles/all-articles.component';
     SignupComponent,
     TypePipe,
     AllArticlesComponent,
+    AboutComponent,
+    
     
   ],
   imports: [
