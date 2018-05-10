@@ -2,8 +2,17 @@
 <div id="my-map" #gmap style="width:40%;height:400px;">
 </div>
 
+<div class="btn"> 
+  <button>Personal Observation</button>
+  <button>Interview</button>
+  <button>Project</button>
+  <button >Story</button>
+  <button> Publication</button>
+
+</div>
+
 <label>
-  Search For Reports
+ Filter reports by title
   <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
 </label>
 <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>

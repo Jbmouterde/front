@@ -41,5 +41,6 @@ export class DetailsArticleComponent implements OnInit {
     })
   }
 
+
 }
 

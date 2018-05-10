@@ -15,6 +15,8 @@ export class AddFormComponent implements OnInit {
   map: google.maps.Map;
   formCreds : Creds = new Creds();
 
+
+  
   // test
   latitude: any;
   longitude: any;
@@ -97,6 +99,7 @@ export class AddFormComponent implements OnInit {
 
   }
 
+  
   //////////////////////
   articleSubmit(){
     this.userTruc.addArticle(this.formCreds)
@@ -110,3 +113,4 @@ export class AddFormComponent implements OnInit {
   }
 
 }
+

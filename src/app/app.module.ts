@@ -16,6 +16,7 @@ import { DetailsArticleComponent } from './details-article/details-article.compo
 import { UserService } from './services/user.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { TypePipe } from './pipes/type.pipe';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { SignupComponent } from './signup/signup.component';
     ReportsPipe,
     DetailsArticleComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    TypePipe,
+    
   ],
   imports: [
     BrowserModule,

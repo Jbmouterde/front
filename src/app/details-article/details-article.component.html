@@ -7,13 +7,25 @@
 <img *ngIf="article?.imageUrl" [src]='article?.imageUrl'/> 
 
 <hr>
-<button class="btn"> Share on FaceBook</button>
-<button class="btn"> Get a Shareable Link</button>
+<button class="btn">Get a Shareable Link
+   <!-- <br>
+  <p>http://localhost:4200/article/5af36299d0c097f581bb05f5 </p>  -->
+</button>
 <button class="btn">Dowload</button>
+
+<div class="fb-share-button" data-href="#" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+  <button class="btn">
+  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+    class="fb-xfbml-parse-ignore">Share Your article</a> </button>
+               
+    
+
+</div>
 </div>
 
 <hr> 
 <button class="btn"><a routerLink="/"> Back </a> </button>
+
 
 
 </div>

@@ -59,7 +59,9 @@
         <div class="form-group">
             <label for="location">
               Location
-              <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control" onFocus="geolocate()" placeholder="enter a location...">
+              <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control" class="location-input" placeholder="enter a location...">
+              <input type="hidden" name="latitude" class="lat-input" />
+              <input type="hidden" name="longitude" class="lng-input" />
             </label>
           </div>
 
@@ -123,6 +125,8 @@
       <button (click)="setMapType('terrain')" class="btn btn-primary">Terrain</button>
       <button (click)="setMapType('satellite')" class="btn btn-danger">Satellite</button>
       <button (click)="setMapType('roadmap')" class="btn btn-warning">Road Map</button>
+      <button (click)="setMapType('hybrid')" class="btn btn-success">Hybrid</button>
+
     </div>
     <div class="col-md-5 col-sm-12 col-xs-12">
       <form class="form-inline" #form="ngForm">
