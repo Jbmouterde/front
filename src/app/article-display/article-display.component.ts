@@ -43,4 +43,17 @@ export class ArticleDisplayComponent implements OnInit {
     })
   }
 
+  filterMe() {
+
+    const typeArray = [];
+
+    this.articles.forEach((oneArticle) => {
+      const lowerArticleType = oneArticle.type.toLowerCase();
+      if (lowerArticleType[0])  {
+        typeArray.push(oneArticle);
+      }
+    });
+    return typeArray;
+  }
+  
 }

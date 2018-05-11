@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
   templateUrl: './add-form.component.html',
   styleUrls: ['./add-form.component.css']
 })
+
+
+
 export class AddFormComponent implements OnInit {
 
   @ViewChild('gmap') gmapElement: any;
@@ -38,6 +41,8 @@ export class AddFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+  
 
    //google map zone
 

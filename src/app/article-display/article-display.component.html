@@ -2,13 +2,14 @@
 <div id="my-map" #gmap style="width:40%;height:400px;">
 </div>
 
-<div class="btn"> 
-  <button>Personal Observation</button>
-  <button>Interview</button>
-  <button>Project</button>
-  <button >Story</button>
-  <button> Publication</button>
 
+
+<div class="btn" > 
+      <button (click)="filterMe()">Personal Information</button>
+      <button (click)="type = {type:0}">Interview</button>
+      <button (click)="type = {type: 2}">Project</button>
+      <button (click)="type = {type: 3}">Story</button>
+      <button (click)="type = {type: 4}">Publication</button>
 </div>
 
 <label>

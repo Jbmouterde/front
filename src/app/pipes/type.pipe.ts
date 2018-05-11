@@ -5,28 +5,25 @@ import { Article } from '../services/article.service';
   name: 'type'
 })
 export class TypePipe implements PipeTransform {
+articles: Array<Article>;
+  transform(value: Array<Article>, typeTerm: string): any {
+    function filterMe () {
 
-  transform(value: Array<Article>, searchTerm: string): any {
-    if(!value) {
-      return [];
+      const typeArray = [];
+  
+      value.forEach((oneArticle) => {
+        const lowerArticleType = oneArticle.type.toLowerCase();
+        if (lowerArticleType)  {
+          typeArray.push(oneArticle);
+        }
+      });
+      return typeArray;
     }
-
-    if (!searchTerm) {
-      return value;
-    }
-
-    searchTerm = searchTerm.toLowerCase();
-
-    const filteredArray = [];
-
-    value.forEach((oneArticle) => {
-      const lowerArticleName = oneArticle.type.toLowerCase();
-      if (lowerArticleName.includes(searchTerm)) {
-        filteredArray.push(oneArticle);
-      }
-    });
-    return filteredArray;
+    
   }
 
-
+ 
 }
+  
+  
+
