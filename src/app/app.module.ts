@@ -11,6 +11,7 @@ import { ArticleDisplayComponent } from './article-display/article-display.compo
 import { AddFormComponent } from './add-form/add-form.component';
 import { ArticleService } from './services/article.service';
 import { ReportsPipe } from './pipes/reports.pipe';
+import { ChartsModule } from 'ng2-charts';
 
 import { DetailsArticleComponent } from './details-article/details-article.component';
 import { UserService } from './services/user.service';
@@ -19,6 +20,7 @@ import { SignupComponent } from './signup/signup.component';
 import { TypePipe } from './pipes/type.pipe';
 import { AllArticlesComponent } from './all-articles/all-articles.component';
 import { AboutComponent } from './about/about.component';
+import { RouteoneComponent } from './routeone/routeone.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { AboutComponent } from './about/about.component';
     TypePipe,
     AllArticlesComponent,
     AboutComponent,
+    RouteoneComponent,
     
     
   ],
@@ -39,7 +42,8 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [ArticleService, UserService],
   bootstrap: [AppComponent]
