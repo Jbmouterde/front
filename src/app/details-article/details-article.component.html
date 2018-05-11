@@ -6,8 +6,10 @@
 <p> written by {{article?.nameWritter}} for <strong>{{article?.organization}}</strong> </p>
 <p> {{article?.description}}</p>
 <img *ngIf="article?.imageUrl" [src]='article?.imageUrl'/> 
+<div *ngIf="userTruc.currentUser">
+    <button (click)="deleteClick()"> Delete </button>
 
-<button (click)="deleteClick()"> Delete </button>
+  </div>
 <hr>
 <button class="btn">Get a Shareable Link
    <!-- <br>
@@ -32,6 +34,6 @@
 
 </div>
 
-<!-- <div *ngIf="userTruc.currentUser">
-    <b> {{userTruc.currentUser.username}}</b>
-</div> -->
+<div *ngIf="userTruc.currentUser">
+
+</div>

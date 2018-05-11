@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Article, ArticleService } from '../services/article.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 
 @Component({
@@ -11,12 +12,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DetailsArticleComponent implements OnInit {
   articleId : string;
   article : Article;
+ 
 
 
   constructor(
     private reqTruc : ActivatedRoute,
     public apiTruc : ArticleService, 
-    private resTruc : Router
+    private resTruc : Router,
+    public userTruc : UserService
   ) { }
 
   ngOnInit() {
