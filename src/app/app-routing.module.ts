@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AllArticlesComponent } from './all-articles/all-articles.component';
 import { AboutComponent } from './about/about.component';
 import { RouteoneComponent } from './routeone/routeone.component';
+import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
   { path : '', component : ArticleDisplayComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path : 'signup', component : SignupComponent},
   { path : 'articles', component : AllArticlesComponent},
   { path : 'about', component : AboutComponent},
+  { path : 'map', component : MapComponent},
   { path: 'routeone', component: RouteoneComponent },
 
   { path:  'article/:blahId', component: DetailsArticleComponent}
