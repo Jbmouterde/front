@@ -30,6 +30,7 @@
           
           <div class="card-body">
             <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
+            <p>{{oneArticle.location}} </p>
             <p class="card-text">Organization : {{oneArticle.organization}}</p>
             
               <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> See Details</a>

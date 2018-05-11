@@ -59,7 +59,7 @@
         <div class="form-group">
             <label for="location">
               Location
-              <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control" class="location-input" placeholder="enter a location...">
+              <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control" class="location-input"autocorrect="off" autocapitalize="off" spellcheck="off" placeholder="enter a location..." #search [formControl]="searchControl">
               <input type="hidden" name="latitude" class="lat-input" />
               <input type="hidden" name="longitude" class="lng-input" />
             </label>
@@ -109,8 +109,16 @@
 <!-- <div id="my-map" #gmap style="width:40%;height:400px">
 </div> -->
 
-<!-- // OLD  -->
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+  <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
+ 
+</agm-map>
 
+
+
+
+<!-- // OLD  -->
+<!-- 
 <div class="container">
 
   <div style="text-align:center">
@@ -161,4 +169,4 @@
       </div>
     </div>
   </div>
-
+ -->
