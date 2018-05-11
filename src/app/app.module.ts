@@ -22,6 +22,11 @@ import { AllArticlesComponent } from './all-articles/all-articles.component';
 import { AboutComponent } from './about/about.component';
 import { RouteoneComponent } from './routeone/routeone.component';
 
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,15 +40,21 @@ import { RouteoneComponent } from './routeone/routeone.component';
     AllArticlesComponent,
     AboutComponent,
     RouteoneComponent,
+    MapComponent,
     
     
   ],
   imports: [
+    GooglePlaceModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyDG1XWykr6YhJ9TfbxtU8RSGKEfurrgn8Y",
+      libraries: ["places"]
+    })
   ],
   providers: [ArticleService, UserService],
   bootstrap: [AppComponent]

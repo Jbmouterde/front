@@ -4,6 +4,12 @@ import { } from '@types/googlemaps';
 import { ArticleService, Creds } from '../services/article.service';
 import { Router } from '@angular/router';
 
+// TEST 
+import { ElementRef, NgZone } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { } from 'googlemaps';
+//
+
 @Component({
   selector: 'app-add-form',
   templateUrl: './add-form.component.html',
@@ -13,7 +19,9 @@ import { Router } from '@angular/router';
 
 
 export class AddFormComponent implements OnInit {
+// TEST 
 
+//
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
   formCreds : Creds = new Creds();
