@@ -32,6 +32,12 @@ addArticle(creds : Creds){
   })
 }
 
+//DELETE ARTICLE 
+delete(articleId){
+  return this.ajaxTruc
+  .delete(`http://localhost:3000/api/articles/${articleId}`)
+  .toPromise()
+}
 }
 
 export class Article {

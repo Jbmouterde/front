@@ -2,7 +2,9 @@
   map works!
 </p>
 
-
+<div class="form-group">
+  <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+</div>
 <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
   <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
  

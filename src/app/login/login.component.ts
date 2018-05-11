@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   loginSubmit(){
     this.userTruc.postLogin(this.formCreds)
     .then((result)=>{
-      this.resTruc.navigateByUrl('/')
+      this.resTruc.navigateByUrl('/admin')
     })
     .catch((err)=>{
       console.log("Log in error")

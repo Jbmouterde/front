@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import{ HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -25,6 +25,7 @@ import { RouteoneComponent } from './routeone/routeone.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './map/map.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     AboutComponent,
     RouteoneComponent,
     MapComponent,
+    AdminComponent,
     
     
   ],
@@ -48,6 +50,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     GooglePlaceModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     ChartsModule,
