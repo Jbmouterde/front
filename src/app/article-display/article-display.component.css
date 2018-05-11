@@ -13,6 +13,7 @@ color: darkgreen;
   float: left;
   overflow: scroll;
   height: 450px;
+ 
 }
 
 #report-seach {
@@ -37,7 +38,7 @@ label {
 
 #my-map {
   float: left;
-  margin-top: 100px;
+  margin-top: 140px;
   margin-left: 40px;
   
 }
@@ -108,3 +109,32 @@ img,
 figure {
   max-width: 100%;
 }
+
+/* .row {
+  width: 100%;
+  height: 300px;
+}
+
+#grid-article {
+  height: 400px;
+  display: flex;
+} */
+
+
+.col-3 {
+  float: left;
+  width: 25%;
+  
+}
+ 
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+ 
+
