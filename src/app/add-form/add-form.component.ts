@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 import { ElementRef, NgZone } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { } from 'googlemaps';
-import { MapsAPILoader } from '@agm/core';
 //
 
 @Component({

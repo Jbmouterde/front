@@ -1,7 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { GooglePlaceDirective } from 'ngx-google-places-autocomplete';
-import { Address } from 'ngx-google-places-autocomplete/objects/address';
-import { ComponentRestrictions } from 'ngx-google-places-autocomplete/objects/options/componentRestrictions';
 
 
 @Component({
@@ -11,24 +8,20 @@ import { ComponentRestrictions } from 'ngx-google-places-autocomplete/objects/op
 })
 export class MapComponent implements OnInit {
 
-  @ViewChild('places') places: GooglePlaceDirective;
+ latitude = 51.678418;
+ longitude = 7.809007;
+ locationChosen = false
 
-  public onChange(address: Address) {
-      console.log(address.geometry.location.lng());
-      console.log(address.geometry.location.lat());
-      console.log(address.geometry.location.toJSON());
-      console.log(address.geometry.viewport.getNorthEast());
-  }
+ onChooseLocation(event){
+   this.latitude = event.coords.lat;
+   this.longitude = event.coords.lng;
 
-  public changeConfig() {
-      this.places.options.componentRestrictions = new ComponentRestrictions({
-          country: "UA"
-      });
+   this.locationChosen = true
 
-      this.places.reset();
-  }
 
+ }
   constructor() { }
+
 
   ngOnInit() {
   }

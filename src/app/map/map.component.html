@@ -2,6 +2,8 @@
   map works!
 </p>
 
-<input ngx-google-places-autocomplete #places="ngx-places" (onAddressChange)="onChange($event)" />
-    <button (click)="changeConfig()">Change Config</button>
-    <button (click)="search()">Execute search</button>
+
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+  <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
+ 
+</agm-map>
