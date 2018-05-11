@@ -11,6 +11,7 @@ import { ArticleDisplayComponent } from './article-display/article-display.compo
 import { AddFormComponent } from './add-form/add-form.component';
 import { ArticleService } from './services/article.service';
 import { ReportsPipe } from './pipes/reports.pipe';
+import { ChartsModule } from 'ng2-charts';
 
 import { DetailsArticleComponent } from './details-article/details-article.component';
 import { UserService } from './services/user.service';
@@ -41,7 +42,8 @@ import { RouteoneComponent } from './routeone/routeone.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [ArticleService, UserService],
   bootstrap: [AppComponent]
