@@ -10,11 +10,13 @@ import { } from '@types/googlemaps';
   styleUrls: ['./article-display.component.css']
 })
 export class ArticleDisplayComponent implements OnInit {
-
-
+ 
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
   articles : Article[] = [];
+  userInput: string;
+  typeFilter: string = "Personal Information"
+  
 
   constructor(
     public apiTruc : ArticleService
@@ -43,17 +45,9 @@ export class ArticleDisplayComponent implements OnInit {
     })
   }
 
-  filterMe() {
 
-    const typeArray = [];
-
-    this.articles.forEach((oneArticle) => {
-      const lowerArticleType = oneArticle.type.toLowerCase();
-      if (lowerArticleType[0])  {
-        typeArray.push(oneArticle);
-      }
-    });
-    return typeArray;
+  setTypeFilter(filterName) {
+    this.typeFilter = filterName
   }
   
 }

@@ -6,19 +6,13 @@ import { Article } from '../services/article.service';
 })
 export class TypePipe implements PipeTransform {
 articles: Array<Article>;
-  transform(value: Array<Article>, typeTerm: string): any {
-    function filterMe () {
-
-      const typeArray = [];
-  
-      value.forEach((oneArticle) => {
-        const lowerArticleType = oneArticle.type.toLowerCase();
-        if (lowerArticleType)  {
-          typeArray.push(oneArticle);
-        }
-      });
-      return typeArray;
-    }
+  transform(articles: Array<Article>, typeTerm: string): any {
+    
+    return articles.filter(function(article) {
+      console.log(article.type === typeTerm)
+      return article.type === typeTerm
+    })
+      
     
   }
 

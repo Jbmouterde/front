@@ -4,12 +4,12 @@
 
 
 
-<div class="btn" > 
-      <button (click)="filterMe()">Personal Information</button>
-      <button (click)="type = {type:0}">Interview</button>
-      <button (click)="type = {type: 2}">Project</button>
-      <button (click)="type = {type: 3}">Story</button>
-      <button (click)="type = {type: 4}">Publication</button>
+<div class="btn"> 
+      <button (click)="setTypeFilter('Personal Information')"> Personal Information</button>
+      <button (click)="setTypeFilter('Interview')"> Interview  </button>
+      <button (click)="setTypeFilter('Project')"> Project    </button>
+      <button (click)="setTypeFilter('Story')"> Story      </button>
+      <button (click)="setTypeFilter('Publication')"> Publication </button>
 </div>
 
 <label>
@@ -25,7 +25,7 @@
   
  
   <ul> 
-      <li *ngFor="let oneArticle of (articles | reports : userInput)">
+      <li *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
       <div class="card" style="width: 37rem; height: 8em;  background: #d1ccc0;" >
           
           <div class="card-body">
