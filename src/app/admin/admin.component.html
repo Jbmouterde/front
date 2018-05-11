@@ -1,0 +1,33 @@
+
+
+  <div class="container">
+
+    <div class="container vri">
+<div class="reports-container">
+  <button class="btn"><a routerLink="/"> Back </a> </button>
+
+
+
+  <ul> 
+      <li *ngFor="let oneArticle of articles">
+      <div>
+          
+          <div class="card-body">
+            <h3> {{oneArticle.title}} </h3>
+            <p class="card-text"> written by {{oneArticle.nameWritter}} for  <strong>{{oneArticle.organization}} </strong></p>
+            
+              <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> Detail</a>
+     
+                <button (click)="deleteClick()"> Add </button>
+              
+<hr>
+
+
+          </div>
+        </div>
+      </li>
+  </ul>
+
+</div>
+</div>
+

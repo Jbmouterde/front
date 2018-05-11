@@ -25,6 +25,7 @@ import { RouteoneComponent } from './routeone/routeone.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './map/map.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     AboutComponent,
     RouteoneComponent,
     MapComponent,
+    AdminComponent,
     
     
   ],

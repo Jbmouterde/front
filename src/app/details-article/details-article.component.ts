@@ -41,6 +41,23 @@ export class DetailsArticleComponent implements OnInit {
     })
   }
 
-
+  deleteClick(){
+    const {title} =this.article
+    
+    const isOkay = confirm(`Are you sure you want to delete ${title}?`)
+    
+        if(!isOkay){
+          return; 
+        }
+    
+        this.apiTruc.delete(this.articleId)
+          .then(()=>{
+            this.resTruc.navigateByUrl('/admin');
+          })
+          .catch((err)=>{
+            console.log('article error delete')
+            console.log(err)
+          })
+        }
 }
 

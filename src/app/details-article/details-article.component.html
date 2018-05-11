@@ -6,6 +6,7 @@
 <p> {{article?.description}}</p>
 <img *ngIf="article?.imageUrl" [src]='article?.imageUrl'/> 
 
+<button (click)="deleteClick()"> Delete </button>
 <hr>
 <button class="btn">Get a Shareable Link
    <!-- <br>
