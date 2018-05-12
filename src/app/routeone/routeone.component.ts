@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { Article, ArticleService } from '../services/article.service';
 
 @Component({
   selector: 'app-routeone',
@@ -8,6 +9,8 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class RouteoneComponent implements OnInit {
   // OTHER PIE
+  article = Article;
+
   public doughnutChartLabels:string[] = ['Personal Information', 'Interview', 'Story', 'Projects', 'Publication'];
   public doughnutChartData:number[] = [350, 450, 100, 200, 200];
   public doughnutChartType:string = 'doughnut';
@@ -24,7 +27,8 @@ export class RouteoneComponent implements OnInit {
   }
 
   constructor(
-    private router: Router
+    private router: Router,
+    public apiTruc : ArticleService
   ){
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {

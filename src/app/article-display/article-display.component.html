@@ -26,7 +26,7 @@
  
   <ul> 
       <li *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
-      <div class="card" style="width: 37rem; height: 10em;  background: #d1ccc0;" >
+      <div class="card" style="width: 50rem; height: 8em;  background: #d1ccc0;" >
           
           <div class="card-body">
             <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
@@ -42,17 +42,17 @@
 </div>
 
 
-<!-- Grid articles -->
+
 
 <div class="container" id="grid-article">
-    <div class="row" *ngFor="let oneArticle of articles">
-      <div class="col-3">
+    <div class="card" *ngFor="let oneArticle of articles">
+  
         <h4>{{oneArticle.title}}</h4>
         <p>Organization: {{oneArticle.organization}}</p>
         <img [src]="oneArticle.imageUrl">
       </div>   
     </div>
-</div>
+
 
 
 

@@ -113,12 +113,12 @@ figure {
 /* .row {
   width: 100%;
   height: 300px;
-}
+} */
 
 #grid-article {
-  height: 400px;
+ text-align : center; 
   display: flex;
-} */
+} 
 
 
 .col-3 {
