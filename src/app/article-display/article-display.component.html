@@ -59,12 +59,14 @@
     <ul> 
       <h2> HEADLINES NEWS </h2>
         <li *ngFor="let oneNews of news">
-           
+            <div class="card" >
             <!-- <div class="card-body"> -->
               <h4> title news : {{oneNews.title}} </h4>
               <a href="{{oneNews.url}}" > link URL  </a>
 
      
             <!-- </div> -->
+          </div>
         </li>
+
     </ul>

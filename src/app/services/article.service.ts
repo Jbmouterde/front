@@ -43,7 +43,7 @@ delete(articleId){
 
 // API NEWS 
 getNews(){
-  return this.ajaxTruc.get('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=17ff854720b449c6bbd72574e7a18d9e')
+  return this.ajaxTruc.get('https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=17ff854720b449c6bbd72574e7a18d9e')
   .toPromise();
 }
 
