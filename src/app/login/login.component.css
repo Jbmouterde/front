@@ -1,1 +1,30 @@
+.circle {
+  position: relative;
+  background-color: #ffc107;
+  border: 2px solid #BD9016;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+
+  transition: all 1s ease 500ms;
+
+}
+
+.circle:hover {
+ 
+  transform: translate(200px, 200px) scale(2) rotate(180deg);
+  opacity: 0.5;
+
+  background-color: pink;
+  border: 10px solid red;
+}
+
+.circle p {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #BD9016;
+}
 

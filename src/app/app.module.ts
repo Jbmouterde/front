@@ -12,6 +12,7 @@ import { AddFormComponent } from './add-form/add-form.component';
 import { ArticleService } from './services/article.service';
 import { ReportsPipe } from './pipes/reports.pipe';
 import { ChartsModule } from 'ng2-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DetailsArticleComponent } from './details-article/details-article.component';
 import { UserService } from './services/user.service';
@@ -53,6 +54,7 @@ import { AdminComponent } from './admin/admin.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
     ChartsModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyDG1XWykr6YhJ9TfbxtU8RSGKEfurrgn8Y",
