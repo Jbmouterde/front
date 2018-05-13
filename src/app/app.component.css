@@ -8,9 +8,10 @@
   border-radius: 8px;
 }
 
-#logout {
+  li #logout {
   float: right;
-  margin-top: 15px;
+  margin-top: 5px;
+  margin-bottom: 20px;
   margin-right: 10px;
 }
 footer{

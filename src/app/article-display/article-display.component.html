@@ -5,11 +5,11 @@
 
 
 <div class="btn"> 
-      <button (click)="setTypeFilter('Personal Information')"> Personal Information</button>
-      <button (click)="setTypeFilter('Interview')"> Interview  </button>
-      <button (click)="setTypeFilter('Project')"> Project    </button>
-      <button (click)="setTypeFilter('Story')"> Story      </button>
-      <button (click)="setTypeFilter('Publication')"> Publication </button>
+      <button class="btn btn-outline-primary" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
+      <button class="btn btn-outline-secondary" (click)="setTypeFilter('Interview')"> Interview  </button>
+      <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
+      <button class="btn btn-outline-warning" (click)="setTypeFilter('Story')"> Story      </button>
+      <button class="btn btn-outline-info" (click)="setTypeFilter('Publication')"> Publication </button>
 </div>
 
 <label>
@@ -57,7 +57,7 @@
 
 
     <ul> 
-      <h2> HEADLINES NEWS </h2>
+      <h2 class="headlines"> HEADLINES NEWS </h2>
         <li *ngFor="let oneNews of news">
             <div class="card" >
             <!-- <div class="card-body"> -->
