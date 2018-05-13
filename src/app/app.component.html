@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
 
-            <span *ngIf="userTruc.currentUser.role == 'admin'">
+            <span *ngIf="userTruc.currentUser">
 
             <button (click)="logoutClick()"> Log Out </button>
 </span>
@@ -28,8 +28,8 @@
             ADMIN 
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <span *ngIf="userTruc.currentUser.role == 'admin'">
-                              <b> {{userTruc.currentUser.role}}</b>
+              <span *ngIf="userTruc.currentUser">
+                              <b> {{userTruc.currentUser.username}}</b>
               </span>
              <a class="dropdown-item" routerLink="/forms">Créer un formulaire</a>
 

@@ -76,3 +76,4 @@ export class LoginCredentials {
   username : string; 
   password : string;
 }
+// <span *ngIf="userTruc.currentUser.role == 'admin'">
