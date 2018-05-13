@@ -12,6 +12,8 @@ export class ArticleService {
 
 // GET / ARTICLES
 
+
+
 getList(){
   return this.ajaxTruc
   .get('http://localhost:3000/api/articles')
@@ -38,6 +40,13 @@ delete(articleId){
   .delete(`http://localhost:3000/api/articles/${articleId}`)
   .toPromise()
 }
+
+// API NEWS 
+getNews(){
+  return this.ajaxTruc.get('https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=17ff854720b449c6bbd72574e7a18d9e')
+  .toPromise();
+}
+
 }
 
 export class Article {
@@ -66,3 +75,17 @@ export class Creds {
   reportChange : string; 
   type : string ; 
 };
+
+export class News {
+  
+  source: {
+    id: number,
+    name: string
+};
+author: string;
+title: string;
+description: string;
+url: string;
+urlToImage: string;
+publishedAt: Date;
+}

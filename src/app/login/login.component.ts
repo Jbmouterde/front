@@ -4,6 +4,7 @@ import { LoginCredentials, UserService } from '../services/user.service';
 import { trigger, transition, useAnimation } from '@angular/animations';
 
 import { bounce } from 'ng-animate';
+import { ArticleService, News } from '../services/article.service';
 
 
 @Component({
@@ -22,11 +23,14 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public userTruc : UserService,
-    private resTruc : Router
+    private resTruc : Router,
+    public apiTruc : ArticleService
   ) { }
 
   ngOnInit() {
+
   }
+
 
   loginSubmit(){
     this.userTruc.postLogin(this.formCreds)

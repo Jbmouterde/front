@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticleService, Article } from '../services/article.service';
+import { ArticleService, Article, News } from '../services/article.service';
 import { ViewChild } from '@angular/core';
 import { } from '@types/googlemaps';
 
@@ -15,15 +15,33 @@ export class ArticleDisplayComponent implements OnInit {
   map: google.maps.Map;
   articles : Article[] = [];
   userInput: string;
+<<<<<<< HEAD
   typeFilter: string= "Project"
   
+=======
+  typeFilter: string = "Personal Information"
+  news : Array<News> = [];
+
+>>>>>>> ef3303e6f65581d87b3ff2de53af9c725f53da42
 
   constructor(
     public apiTruc : ArticleService
   ) { }
 
   ngOnInit() {
-
+    this.apiTruc.getNews()
+    // .then((result : News[])=>{
+      .then((result : any)=>{
+        console.log('news result' ,result.articles)
+        // this.news.push(result.articles)
+      // console.log(result)
+      this.news = result.articles
+      // console.log(result)
+    })
+    .catch((err)=>{
+      console.log("News list error")
+      console.log(err)
+    })
 
    //google map zone
 
