@@ -66,6 +66,7 @@ export class UserService {
 export class User {
   _id : string; 
   username : string; 
+  role : string;
   //? make it optional
   updated_at?: Date ; 
   created_at: Date ; 
@@ -75,3 +76,4 @@ export class LoginCredentials {
   username : string; 
   password : string;
 }
+// <span *ngIf="userTruc.currentUser.role == 'admin'">
