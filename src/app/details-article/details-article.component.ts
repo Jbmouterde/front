@@ -23,6 +23,8 @@ export class DetailsArticleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    //test
+   
 
     this.reqTruc.paramMap
     .subscribe((myParams)=>{
@@ -46,7 +48,11 @@ export class DetailsArticleComponent implements OnInit {
       console.log(err)
     })
   }
+//test 
 
+
+
+//
   deleteClick(){
     const {title} =this.article
     

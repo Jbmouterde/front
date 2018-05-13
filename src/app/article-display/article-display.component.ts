@@ -17,7 +17,9 @@ export class ArticleDisplayComponent implements OnInit {
   userInput: string;
   typeFilter: string = "Project"
   news : Array<News> = [];
-
+  article : Article;
+  //test 
+myCount : number = 0
 
   constructor(
     public apiTruc : ArticleService
@@ -38,6 +40,7 @@ export class ArticleDisplayComponent implements OnInit {
       console.log(err)
     })
 
+  
    //google map zone
 
    var mapProp = {
@@ -58,6 +61,16 @@ export class ArticleDisplayComponent implements OnInit {
     })
   }
 
+  // TEST BUTTON +1 
+  increaseCount(){
+    console.log( this.article.like)
+    this.article.like += 1
+    console.log( this.article.like)
+  }
+  
+  // increaseCount(){
+  //   this.myCount += 1
+  // }
 
   setTypeFilter(filterName) {
     this.typeFilter = filterName
