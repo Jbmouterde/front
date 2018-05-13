@@ -13,7 +13,9 @@ color: darkgreen;
   float: left;
   overflow: scroll;
   height: 450px;
- 
+  margin-bottom: 50px;
+  
+  
 }
 
 #report-seach {
@@ -40,11 +42,15 @@ label {
   float: left;
   margin-top: 140px;
   margin-left: 40px;
+  margin-bottom: 50px;
+  
   
 }
 
 
-
+.btn {
+  padding-left: 100px;
+}
 
 .reports-container li {
   list-style-type: none;

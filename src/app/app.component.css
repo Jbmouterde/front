@@ -8,6 +8,11 @@
   border-radius: 8px;
 }
 
+#logout {
+  float: right;
+  margin-top: 15px;
+  margin-right: 10px;
+}
 footer{
 clear: both;
 color: wheat;

@@ -15,14 +15,9 @@ export class ArticleDisplayComponent implements OnInit {
   map: google.maps.Map;
   articles : Article[] = [];
   userInput: string;
-<<<<<<< HEAD
-  typeFilter: string= "Project"
-  
-=======
-  typeFilter: string = "Personal Information"
+  typeFilter: string = "Project"
   news : Array<News> = [];
 
->>>>>>> ef3303e6f65581d87b3ff2de53af9c725f53da42
 
   constructor(
     public apiTruc : ArticleService
