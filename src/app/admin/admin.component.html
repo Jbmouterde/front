@@ -9,6 +9,7 @@
 
 
   <ul> 
+      <h2> All articles</h2>
       <li *ngFor="let oneArticle of articles">
       <div>
           
@@ -31,3 +32,24 @@
 </div>
 </div>
 
+<ul> 
+    <h2> All Users</h2>
+    <li *ngFor="let oneUser of users">
+    <div>
+        
+        <div class="card-body">
+          <h3> {{oneUser.username}} </h3>
+          <p class="card-text"> ID User :{{oneUser._id}} </p>
+          
+   
+              <button (click)="deleteClick()"> Delete </button>
+            
+<hr>
+
+
+        </div>
+      </div>
+    </li>
+</ul>
+
+</div>

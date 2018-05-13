@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService, Article } from '../services/article.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UserService, User } from '../services/user.service';
 
 
 @Component({
@@ -12,11 +13,13 @@ export class AdminComponent implements OnInit {
   articles : Article[] = [];
   articleId : string
 article : Article
+users : User[] =[]
 
   constructor(
     public apiTruc : ArticleService,
     private resTruc : Router,
-    private reqTruc : ActivatedRoute
+    private reqTruc : ActivatedRoute, 
+    public apiTrac : UserService
   ) { }
 
   ngOnInit() {
@@ -29,7 +32,19 @@ article : Article
       console.log("Article list error")
       console.log(err)
     })
+// GET USER 
+    this.apiTrac.getUser()
+    .then((resul : User[])=>{
+      this.users = resul
+      console.log(resul)
+    })
+    .catch((err)=>{
+      console.log("User list error")
+      console.log(err)
+    })
   }
+
+
   // deleteClick(){
   //   const {title} =this.article
     
