@@ -48,6 +48,8 @@
     <div class="card" *ngFor="let oneArticle of articles">
   
         <h4>{{oneArticle.title}}</h4>
+        <p> Number of reaction {{oneArticle.like}}</p>
+      <button> Add a reaction </button>
         <p>Organization: {{oneArticle.organization}}</p>
         <img [src]="oneArticle.imageUrl">
       </div>   

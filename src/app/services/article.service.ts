@@ -61,6 +61,7 @@ export class Article {
   organization : string; 
   reportChange : string; 
   type : string ; 
+  like : Number;
 };
 
 export class Creds {
