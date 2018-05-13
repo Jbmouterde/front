@@ -61,6 +61,12 @@ export class UserService {
     })
   }
 
+
+getUser(){
+  return this.ajaxTruc
+  .get('http://localhost:3000/api/admin')
+  .toPromise();
+}
 }
 
 export class User {
