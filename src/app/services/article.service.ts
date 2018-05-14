@@ -69,12 +69,12 @@ export class Creds {
   date : Date; 
   description : string;
   nameWritter : string;
-  location : string;
   email : string;
   imageUrl : string ; 
   organization : string; 
   reportChange : string; 
   type : string ; 
+  coordinates: number[];
   // like : number = 0;
 
 };
