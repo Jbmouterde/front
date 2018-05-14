@@ -12,15 +12,24 @@ import { } from '@types/googlemaps';
 export class ArticleDisplayComponent implements OnInit {
  
   @ViewChild('gmap') gmapElement: any;
-  map: google.maps.Map;
   article : Article;
 
   articles : Article[] = [];
   userInput: string;
   typeFilter: string;
   news : Array<News> = [];
-  //test 
-myCount : number = 0
+ latitude = 51.678418;
+ longitude = 7.809007
+ locationChosen = false
+
+ onChooseLocation(event){
+  this.latitude = event.coords.lat;
+  this.longitude = event.coords.lng;
+
+  this.locationChosen = true
+
+
+}
 
 classState : any = {
 
@@ -48,13 +57,6 @@ classState : any = {
 
   
    //google map zone
-
-   var mapProp = {
-    center: new google.maps.LatLng(18.5793, 73.8143),
-    zoom: 15,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
 
     this.apiTruc.getList()
     .then((result : Article[])=>{
