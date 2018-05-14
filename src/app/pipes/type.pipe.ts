@@ -14,7 +14,7 @@ articles: Array<Article>;
     }
 
     if (!typeTerm) {
-      // return the original array if there's no search term
+      
       return articles;
     }
 
