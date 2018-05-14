@@ -85,17 +85,17 @@ export class DetailsArticleComponent implements OnInit , AfterViewInit, OnDestro
           })
         }
         ngAfterViewInit() {
-          const style = {
-            base: {
-              lineHeight: '24px',
-              fontFamily: 'monospace',
-              fontSmoothing: 'antialiased',
-              fontSize: '19px',
-              '::placeholder': {
-                color: 'purple'
-              }
-            }
-          }
+          // const style = {
+          //   base: {
+          //     lineHeight: '24px',
+          //     fontFamily: 'monospace',
+          //     fontSmoothing: 'antialiased',
+          //     fontSize: '19px',
+          //     '::placeholder': {
+          //       color: 'purple'
+          //     }
+          //   }
+          // }
           this.card = elements.create('card');
           this.card.mount(this.cardInfo.nativeElement);
       
