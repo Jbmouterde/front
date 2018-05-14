@@ -3,7 +3,7 @@ import { ViewChild } from '@angular/core';
 import { } from '@types/googlemaps';
 import { ArticleService, Creds } from '../services/article.service';
 import { Router } from '@angular/router';
-
+// import '../../assets/map'
 // TEST 
 import { ElementRef, NgZone } from '@angular/core';
 import { FormControl } from '@angular/forms';
