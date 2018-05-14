@@ -6,11 +6,22 @@ import { Article } from '../services/article.service';
 })
 export class TypePipe implements PipeTransform {
 articles: Array<Article>;
-  transform(articles: Array<Article>, typeTerm: string): any {
+  transform(articles: Array<Article>, typeTerm: string): Array<Article> {
     
+
+    if(!articles) {
+      return [];
+    }
+
+    if (!typeTerm) {
+      // return the original array if there's no search term
+      return articles;
+    }
+
+
     return articles.filter(function(article) {
       console.log(article.type === typeTerm)
-      return article.type === typeTerm
+      return (article.type === typeTerm);
     })
       
     
