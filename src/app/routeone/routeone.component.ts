@@ -11,8 +11,10 @@ export class RouteoneComponent implements OnInit {
   // OTHER PIE
   article = Article;
 
+  
+
   public doughnutChartLabels:string[] = ['Personal Information', 'Interview', 'Story', 'Projects', 'Publication'];
-  public doughnutChartData:number[] = [350, 450, 100, 200, 200];
+  public doughnutChartData:number[] = [50, 30, 15, 5, 0];
   public doughnutChartType:string = 'doughnut';
  
 

@@ -3,7 +3,7 @@ import { ViewChild } from '@angular/core';
 import { } from '@types/googlemaps';
 import { ArticleService, Creds } from '../services/article.service';
 import { Router } from '@angular/router';
-
+// import '../../assets/map'
 // TEST 
 import { ElementRef, NgZone } from '@angular/core';
 import { FormControl } from '@angular/forms';
@@ -104,6 +104,10 @@ public searchElementRef: ElementRef;
          //set latitude, longitude and zoom
          this.latitude = place.geometry.location.lat();
          this.longitude = place.geometry.location.lng();
+         this.formCreds.coordinates = [
+          place.geometry.location.lat(),
+          place.geometry.location.lng()
+        ];
          this.zoom = 12;
        });
      });
@@ -115,6 +119,10 @@ public searchElementRef: ElementRef;
      navigator.geolocation.getCurrentPosition((position) => {
        this.latitude = position.coords.latitude;
        this.longitude = position.coords.longitude;
+       this.formCreds.coordinates = [
+        position.coords.latitude,
+        position.coords.longitude
+      ];
        this.zoom = 12;
      });
    }
@@ -122,70 +130,13 @@ public searchElementRef: ElementRef;
 
    //google map zone
 
-  //  var mapProp = {
-  //   center: new google.maps.LatLng(18.5793, 73.8143),
-  //   zoom: 15,
-  //   mapTypeId: google.maps.MapTypeId.ROADMAP,
-    
-  // };
-  // this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp)
-  // }
-  // /////////////////
-  // // TEST 
-  // setMapType(mapTypeId: string) {
-  //   this.map.setMapTypeId(mapTypeId)
-  // }
-
-  // setCenter() {
-  //   this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
-
-  //   let location = new google.maps.LatLng(this.latitude, this.longitude);
-
-  //   let marker = new google.maps.Marker({
-  //     position: location,
-  //     map: this.map,
-  //     title: 'Got you!'
-  //   });
-
-  //   marker.addListener('click', this.simpleMarkerHandler);
-
-  //   marker.addListener('click', () => {
-  //     this.markerHandler(marker);
-  //   });
-  // }
-
-  // simpleMarkerHandler() {
-  //   alert('Simple Component\'s function...');
-  // }
-
-  // markerHandler(marker: google.maps.Marker) {
-  //   alert('Marker\'s Title: ' + marker.getTitle());
-  // }
-
-  // showCustomMarker() {
-
-
-  //   this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
-
-  //   let location = new google.maps.LatLng(this.latitude, this.longitude);
-
-  //   console.log(`selected marker: ${this.selectedMarkerType}`);
-    
-  //   let marker = new google.maps.Marker({
-  //     position: location,
-  //     map: this.map,
-  //     icon: this.iconBase + this.selectedMarkerType,
-  //     title: 'Got you!'
-  //   });
-
-  // }
-
-  
   //////////////////////
   articleSubmit(){
     this.userTruc.addArticle(this.formCreds)
+    
     .then((result)=>{
       this.resTruc.navigateByUrl('/')
+      console.log(this.latitude)
     })
     .catch((err)=>{
       console.log("Log in error")

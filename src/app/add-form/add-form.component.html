@@ -108,10 +108,13 @@
 
 <!-- <div id="my-map" #gmap style="width:40%;height:400px">
 </div> -->
-{{longitude}}
-{{latitude}}
+<p>{{longitude}} </p>
+<p>{{latitude}} </p>
+
 <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
-  <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
+  <agm-marker 
+  *ngFor="let m of markers;let i = index"
+  [latitude]="m.latitude" [longitude]="m.longitude" *ngIf="locationChosen">  </agm-marker>
  
 </agm-map>
 
