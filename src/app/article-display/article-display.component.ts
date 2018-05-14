@@ -20,15 +20,18 @@ export class ArticleDisplayComponent implements OnInit {
   news : Array<News> = [];
  latitude = 51.678418;
  longitude = 7.809007
- locationChosen = false
+//  locationChosen = false
   zoom : number = 3;
 
  onChooseLocation(event){
   this.latitude = event.coords.lat;
   this.longitude = event.coords.lng;
-  this.locationChosen = true
-}
+  console.log(this.articles)
+  console.log(this.longitude)
+  console.log(this.latitude)
 
+  // this.locationChosen = true
+}
 
 
 classState : any = {

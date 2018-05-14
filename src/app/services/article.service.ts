@@ -55,7 +55,8 @@ export class Article {
   date : Date; 
   description : string;
   nameWritter : string;
-  location : string;
+  // location : string;
+  coordinates: number[];
   email : string;
   imageUrl : string ; 
   organization : string; 

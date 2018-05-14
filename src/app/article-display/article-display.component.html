@@ -1,14 +1,17 @@
 <h2>Reports Display</h2>
 
 <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
-    <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
-    <agm-marker *ngFor="let oneArticle of articles"> 
-      [latitude]="oneArticle.latitude"
-      [longitude]="oneArticle.longitude"
-    </agm-marker>
+    <!-- <agm-marker [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
+
+
+ <div *ngFor="let oneArticle of articles">
+
+        <agm-marker [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
+          </agm-marker>
+    </div>
+
+   
   </agm-map>
-
-
 
 <div class="btn"> 
       <button class="btn btn-outline-primary" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
@@ -36,7 +39,6 @@
           
           <div class="card-body">
             <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
-            <p> {{oneArticle.location.coordinates}} </p>
 
             <p class="card-text">Organization : {{oneArticle.organization}}</p>
             
@@ -80,7 +82,6 @@
               <a href="{{oneNews.url}}" > link URL  </a>
             </div>
      
-            <!-- </div> -->
           </div>
         </li>
 

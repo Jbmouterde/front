@@ -137,6 +137,8 @@ public searchElementRef: ElementRef;
     .then((result)=>{
       this.resTruc.navigateByUrl('/')
       console.log(this.latitude)
+      console.log(this.longitude)
+
     })
     .catch((err)=>{
       console.log("Log in error")
