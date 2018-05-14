@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article, ArticleService, News } from '../services/article.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
-
+import '../../assets/stripe.js'
 
 @Component({
   selector: 'app-details-article',
