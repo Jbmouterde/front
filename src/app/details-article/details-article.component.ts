@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article, ArticleService, News } from '../services/article.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
-
+import '../../assets/stripe.js'
 
 @Component({
   selector: 'app-details-article',
@@ -14,7 +14,6 @@ export class DetailsArticleComponent implements OnInit {
   article : Article;
  
 
-
   constructor(
     private reqTruc : ActivatedRoute,
     public apiTruc : ArticleService, 
@@ -23,6 +22,8 @@ export class DetailsArticleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    //test
+   
 
     this.reqTruc.paramMap
     .subscribe((myParams)=>{
@@ -35,7 +36,8 @@ export class DetailsArticleComponent implements OnInit {
 
 
   }
-  
+ 
+
   fetchPhoneData(){
     // component connect to the service 
     this.apiTruc.getDetails(this.articleId)
@@ -46,7 +48,11 @@ export class DetailsArticleComponent implements OnInit {
       console.log(err)
     })
   }
+//test 
 
+
+
+//
   deleteClick(){
     const {title} =this.article
     

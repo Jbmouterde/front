@@ -61,6 +61,7 @@ export class Article {
   organization : string; 
   reportChange : string; 
   type : string ; 
+  like : number;
 };
 
 export class Creds {
@@ -74,6 +75,8 @@ export class Creds {
   organization : string; 
   reportChange : string; 
   type : string ; 
+  // like : number = 0;
+
 };
 
 export class News {

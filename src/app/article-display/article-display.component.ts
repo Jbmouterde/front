@@ -13,11 +13,19 @@ export class ArticleDisplayComponent implements OnInit {
  
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
+  article : Article;
+
   articles : Article[] = [];
   userInput: string;
   typeFilter: string = "Project"
   news : Array<News> = [];
+  //test 
+myCount : number = 0
 
+classState : any = {
+
+  descriptionYolo: true
+} 
 
   constructor(
     public apiTruc : ArticleService
@@ -38,6 +46,7 @@ export class ArticleDisplayComponent implements OnInit {
       console.log(err)
     })
 
+  
    //google map zone
 
    var mapProp = {
@@ -57,7 +66,21 @@ export class ArticleDisplayComponent implements OnInit {
       console.log(err)
     })
   }
+// btn see more on the article 
+toggleDescriptionClass(){
+  this.classState.descriptionYolo = !this.classState.descriptionYolo;
+}
 
+  // TEST BUTTON +1 
+  increaseCount(){
+    console.log( this.articles[3])
+    this.articles[1].like += 1
+    // console.log( this.article.like)
+  }
+  
+  // increaseCount(){
+  //   this.myCount += 1
+  // }
 
   setTypeFilter(filterName) {
     this.typeFilter = filterName
