@@ -14,7 +14,6 @@ export class DetailsArticleComponent implements OnInit {
   article : Article;
  
 
-
   constructor(
     private reqTruc : ActivatedRoute,
     public apiTruc : ArticleService, 
@@ -37,7 +36,8 @@ export class DetailsArticleComponent implements OnInit {
 
 
   }
-  
+ 
+
   fetchPhoneData(){
     // component connect to the service 
     this.apiTruc.getDetails(this.articleId)

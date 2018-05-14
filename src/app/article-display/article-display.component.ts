@@ -21,6 +21,11 @@ export class ArticleDisplayComponent implements OnInit {
   //test 
 myCount : number = 0
 
+classState : any = {
+
+  descriptionYolo: true
+} 
+
   constructor(
     public apiTruc : ArticleService
   ) { }
@@ -60,6 +65,10 @@ myCount : number = 0
       console.log(err)
     })
   }
+//
+toggleDescriptionClass(){
+  this.classState.descriptionYolo = !this.classState.descriptionYolo;
+}
 
   // TEST BUTTON +1 
   increaseCount(){
