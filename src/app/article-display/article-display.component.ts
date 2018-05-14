@@ -17,7 +17,7 @@ export class ArticleDisplayComponent implements OnInit {
 
   articles : Article[] = [];
   userInput: string;
-  typeFilter: string = "Project"
+  typeFilter: string;
   news : Array<News> = [];
   //test 
 myCount : number = 0
