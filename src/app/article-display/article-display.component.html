@@ -72,10 +72,10 @@
 
     <ul> 
       <h2 class="headlines"> HEADLINES NEWS </h2>
-        <li *ngFor="let oneNews of news">
+        <li *ngFor="let oneNews of news" id="headline">
             <div class="card" >
             <!-- <div class="card-body"> -->
-              <h4> title news : {{oneNews.title}} </h4>
+              <p> <b>{{oneNews.title}}</b>  </p>
               <button (click)="toggleDescriptionClass()"> See more</button>
               <div [ngClass]="classState">
               <p> {{oneNews.description}} </p>

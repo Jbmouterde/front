@@ -50,10 +50,18 @@ agm-map {
   float : left
 }
 
+p {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
 .headlines li {
   list-style-type: none;
 }
 
+#headline {
+  list-style-type: none;
+}
 /* .btn {
   padding-left: 100px;
 
