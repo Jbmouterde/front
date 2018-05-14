@@ -13,11 +13,12 @@ export class ArticleDisplayComponent implements OnInit {
  
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
+  article : Article;
+
   articles : Article[] = [];
   userInput: string;
   typeFilter: string = "Project"
   news : Array<News> = [];
-  article : Article;
   //test 
 myCount : number = 0
 
@@ -65,16 +66,16 @@ classState : any = {
       console.log(err)
     })
   }
-//
+// btn see more on the article 
 toggleDescriptionClass(){
   this.classState.descriptionYolo = !this.classState.descriptionYolo;
 }
 
   // TEST BUTTON +1 
   increaseCount(){
-    console.log( this.article.like)
-    this.article.like += 1
-    console.log( this.article.like)
+    console.log( this.articles[3])
+    this.articles[1].like += 1
+    // console.log( this.article.like)
   }
   
   // increaseCount(){

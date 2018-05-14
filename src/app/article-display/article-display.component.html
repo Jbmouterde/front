@@ -48,8 +48,9 @@
     <div class="card" *ngFor="let oneArticle of articles">
   
         <h4>{{oneArticle.title}}</h4>
-        <p> Number of reaction : {{oneArticle.like}} </p>
+       
         <button (click)="increaseCount()">+1</button>
+        <p> Number of reaction : {{oneArticle.like}} </p>
         <!-- <b> {{myCount}}</b> -->
         <p>Organization: {{oneArticle.organization}}</p>
         <img [src]="oneArticle.imageUrl">
