@@ -1,6 +1,9 @@
 <h2>Reports Display</h2>
-<div id="my-map" #gmap style="width:40%;height:400px;">
-</div>
+
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
+   
+  </agm-map>
 
 
 
@@ -30,6 +33,8 @@
           
           <div class="card-body">
             <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
+            <p> {{oneArticle.location.coordinates}} </p>
+
             <p class="card-text">Organization : {{oneArticle.organization}}</p>
             
               <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> See Details</a>
