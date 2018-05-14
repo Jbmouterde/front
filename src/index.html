@@ -34,10 +34,12 @@
 <!-- <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script> -->
 <!-- test credit card -->
 <script src="https://js.stripe.com/v3/"></script>
-<!-- <script>
-  Stripe.setPublishableKey('pk_test_NLInK4w6r3f4X88AjNLlig4k');
-</script> -->
-<!-- test credit card -->
+<script type="text/javascript">
+  var stripe = Stripe('pk_test_NLInK4w6r3f4X88AjNLlig4k');
+  var elements = stripe.elements();
+</script>
+
+
 
 <script src="dist/ngclipboard.min.js"></script>
   <script>(function (d, s, id) {
