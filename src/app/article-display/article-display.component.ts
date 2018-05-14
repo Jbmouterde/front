@@ -73,8 +73,12 @@ toggleDescriptionClass(){
 
   // TEST BUTTON +1 
   increaseCount(){
-    console.log( this.articles[3])
-    this.articles[1].like += 1
+    this.articles.forEach((oneArticle) => {
+      if(oneArticle._id) {
+
+        oneArticle.like += 1
+      }
+    })
     // console.log( this.article.like)
   }
   
