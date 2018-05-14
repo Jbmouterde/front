@@ -22,6 +22,7 @@ export class ArticleDisplayComponent implements OnInit {
  longitude = 7.809007
 //  locationChosen = false
   zoom : number = 3;
+  likeCount = 0;
 
  onChooseLocation(event){
   this.latitude = event.coords.lat;
@@ -77,15 +78,25 @@ toggleDescriptionClass(){
 }
 
   // TEST BUTTON +1 
-  increaseCount(){
-    this.articles.forEach((oneArticle) => {
-     
-
-        oneArticle.like += 1
+  increaseCount(id: string){
+    
       
-    })
+     
+      this.articles.forEach((oneArticle, index) => {
+        if (oneArticle._id === id) {
+          oneArticle.like += 1;
+          console.log(oneArticle.like)
+        
+        }
+     });
+
+      
+    }
+      
+      
+   
     // console.log( this.article.like)
-  }
+  
   
   // increaseCount(){
   //   this.myCount += 1
