@@ -4,7 +4,7 @@
     <!-- <agm-marker [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
 
 
- <div *ngFor="let oneArticle of articles">
+ <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
 
         <agm-marker [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
           </agm-marker>
