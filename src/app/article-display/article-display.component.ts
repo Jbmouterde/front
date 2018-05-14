@@ -12,8 +12,8 @@ import { } from '@types/googlemaps';
 export class ArticleDisplayComponent implements OnInit {
  
   @ViewChild('gmap') gmapElement: any;
-  article : Article;
 
+  // article : Article;
   articles : Article[] = [];
   userInput: string;
   typeFilter: string;
@@ -21,15 +21,15 @@ export class ArticleDisplayComponent implements OnInit {
  latitude = 51.678418;
  longitude = 7.809007
  locationChosen = false
+  zoom : number = 3;
 
  onChooseLocation(event){
   this.latitude = event.coords.lat;
   this.longitude = event.coords.lng;
-
   this.locationChosen = true
-
-
 }
+
+
 
 classState : any = {
 
@@ -93,3 +93,4 @@ toggleDescriptionClass(){
   }
   
 }
+

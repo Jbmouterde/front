@@ -1,8 +1,11 @@
 <h2>Reports Display</h2>
 
-<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
     <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
-   
+    <agm-marker *ngFor="let oneArticle of articles"> 
+      [latitude]="oneArticle.latitude"
+      [longitude]="oneArticle.longitude"
+    </agm-marker>
   </agm-map>
 
 
