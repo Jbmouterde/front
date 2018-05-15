@@ -26,15 +26,19 @@ export class AddFormComponent implements OnInit {
 latitude = 51.678418;
 longitude = 7.809007;
 locationChosen = false
+mapTypeId: "satellite"
+
 
 onChooseLocation(event){
   this.latitude = event.coords.lat;
   this.longitude = event.coords.lng;
 
   this.locationChosen = true
+  this.mapTypeId = "satellite"
 
 
 }
+
 public latitud: number;
 public longitud: number;
 public searchControl: FormControl;
@@ -79,6 +83,7 @@ public searchElementRef: ElementRef;
    this.zoom = 4;
    this.latitud = 39.8282;
    this.longitud = -98.5795;
+   this.mapTypeId = "satellite"
 
    //create search FormControl
    this.searchControl = new FormControl();
