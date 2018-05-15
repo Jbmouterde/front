@@ -1,5 +1,7 @@
 
-
+ #navbarDropdown {
+   float: right;
+ }
 #logo {
   padding: 9px;
   background: salmon;
@@ -16,7 +18,12 @@
 }
 footer{
 clear: both;
-color: wheat;
-background-color : lightgray
+color: lightgrey;
+background-color : white
 }
+h6 a {
+  text-decoration: none; 
+  color : lightgray
+}
+
 

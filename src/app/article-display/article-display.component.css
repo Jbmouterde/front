@@ -154,6 +154,8 @@ figure {
 #grid-article {
  text-align : center; 
   display: flex;
+  overflow: scroll;
+
 } 
 
 
@@ -180,3 +182,24 @@ body > app-root > div > app-article-display > ul > li:nth-child(2){
   display : none; 
 }
 
+.col-6 {
+  height: 100px;
+  border: 1px solid lightgray;
+}
+
+.col-6 h3 {
+  padding-left: 30px;
+}
+
+.top-photo {
+  background-image: url("https://images.pexels.com/photos/257578/pexels-photo-257578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350");
+  
+  background-position: center;
+  height: 300px;
+  background-repeat: no-repeat
+}
+
+
+.main-row  .col-6{
+  height: 550px;
+}
