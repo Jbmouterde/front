@@ -86,19 +86,28 @@
           </div>
 
           <div class="form-group">
-              <select [(ngModel)]="formCreds.reportChange" name="reportChange" for="reportChange">
-                  <option value="">ReportChange</option>  
-                  
-                    <option  name="Increased rainfall" value="Increased rainfall">Increased rainfall</option>
-                    <option  name="Decreased rainfall" value="Decreased rainfall">Decreased rainfall</option>
-                    <option  name="Changes in timing of seasons" value="Changes in timing of seasons">Changes in timing of seasons</option>
-                    <option  name="Storms" value="Storms">Storms</option>
-                    <option  name="Loss of water source" value="Loss of water source">Loss of water source</option>
-                    <option  name="Wildlfires" value="Wildlfires">Wildlfires</option>
-                    <option  name="none" value="none">None</option>
+              <select [(ngModel)]="formCreds.species" name="species" for="species">
+                  <option value="">Animals Species</option>  
+                    <option  name="Mammals" value="Mammals">Mammals</option>
+                    <option  name="Reptiles" value="Reptiles">Reptiles</option>
+                    <option  name="Birds" value="Birds">Birds</option>
+                    <option  name="Insects" value="Insects">Insects</option>
+                    <option  name="Aquatic Animals" value="Aquatic Animals">Aquatic Animals</option>
+                    <option  name="Other" value="Other">Other</option>
 
                 </select>
             </div>
+            <div class="form-group">
+                <select [(ngModel)]="formCreds.danger" name="danger" for="danger">
+                    <option value="">Danger</option>  
+                    
+                      <option  name="In Danger" value="In Danger">In Danger</option>
+                      <option  name="Real Danger" value="Real Danger">Real Danger</option>
+                      <option  name="Almost Extinct" value="Almost Extinct">Almost Extinct</option>
+                 
+  
+                  </select>
+              </div>
 
 
     <button type="submit" class="btn btn-success">Submit</button>

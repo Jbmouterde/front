@@ -60,9 +60,10 @@ export class Article {
   email : string;
   imageUrl : string ; 
   organization : string; 
-  reportChange : string; 
+  species : string; 
   type : string ; 
   like : number;
+  danger : string;
 };
 
 export class Creds {
@@ -73,9 +74,10 @@ export class Creds {
   email : string;
   imageUrl : string ; 
   organization : string; 
-  reportChange : string; 
+  species : string; 
   type : string ; 
   coordinates: number[];
+  danger : string; 
   // like : number = 0;
 
 };
