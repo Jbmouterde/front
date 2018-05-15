@@ -23,8 +23,22 @@
             <button class="btn btn-outline-success" (click)="setTypeFilter('Story')"> Story      </button>
           
             <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button>
-           
+           <!-- species filter -->
+           <!-- <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
+           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
+           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
+           <br>
+           <br>
+           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
+         
+           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
+           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button> -->
+           <!-- <button class="btn btn-outline-success" (click)="setDangerFilter('In Danger')"> In Danger     </button>
+         
+           <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
+           <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>  -->
 
+<!-- add reports -->
               <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
            
       </div>
@@ -41,7 +55,7 @@
       <!-- <agm-marker [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
       
       
-      <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
+      <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
         
         <agm-marker [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
         </agm-marker>
@@ -64,7 +78,7 @@
           
          
           <ul> 
-              <li *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
+              <li *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
               <div class="card" style="width: 34rem; height: 10em;  background: #d1ccc0;" >
                   
                   <div class="card-body">

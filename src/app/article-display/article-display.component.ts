@@ -15,6 +15,8 @@ export class ArticleDisplayComponent implements OnInit {
 
   // article : Article;
   articles : Article[] = [];
+  speciesFilter : string; 
+  dangerFilter : string;
   userInput: string;
   typeFilter: string;
   news : Array<News> = [];
@@ -90,7 +92,6 @@ toggleDescriptionClass(){
         }
      });
 
-      
     }
       
       
@@ -105,6 +106,12 @@ toggleDescriptionClass(){
   setTypeFilter(filterName) {
     this.typeFilter = filterName
   }
+  setSpeciesFilter(filterName) {
+    this.speciesFilter = filterName
+  }
   
+  setDangerFilter(filterName) {
+    this.dangerFilter = filterName
+  }
 }
 

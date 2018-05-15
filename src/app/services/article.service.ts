@@ -40,13 +40,25 @@ delete(articleId){
   .delete(`http://localhost:3000/api/articles/${articleId}`)
   .toPromise()
 }
+// UPDATE likes 
 
+updateLike(articleId, Credd){
+  return this.ajaxTruc
+  .put(`http://localhost:3000/api/articles/${articleId}`, Credd)
+  .toPromise();
+}
+//
 // API NEWS 
 getNews(){
   return this.ajaxTruc.get('https://newsapi.org/v2/top-headlines?sources=national-geographic&apiKey=17ff854720b449c6bbd72574e7a18d9e')
   .toPromise();
 }
 
+}
+
+
+export class Credd{
+  like : number; 
 }
 
 export class Article {

@@ -28,6 +28,8 @@ import { MapComponent } from './map/map.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { AdminComponent } from './admin/admin.component';
 import { NewsComponent } from './news/news.component';
+import { SpeciesPipe } from './pipes/species.pipe';
+import { DangerPipe } from './pipes/danger.pipe';
 
 
 @NgModule({
@@ -46,6 +48,9 @@ import { NewsComponent } from './news/news.component';
     MapComponent,
     AdminComponent,
     NewsComponent,
+    SpeciesPipe,
+    DangerPipe
+    
     
     
   ],
