@@ -13,8 +13,10 @@
             
             <div class="card-body">
               <h3> {{oneArticle.title}} </h3>
-              <p class="card-text"> written by {{oneArticle.nameWritter}} for  <strong>{{oneArticle.organization}} </strong></p>
-              
+              <h4 class="card-text"> written by {{oneArticle.nameWritter}} for  <strong>{{oneArticle.organization}} </strong></h4>
+               <p>Summary : {{oneArticle.description}} </p>
+               <img [src]="oneArticle.imageUrl">
+
                 <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> See More </a>
        
 

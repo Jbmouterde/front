@@ -35,12 +35,21 @@
 
     <div class="form-group">
         <label for="description">
-          Description
+          Summary : 
           <br>
-          <textarea [(ngModel)]="formCreds.description" name="description"  cols="30" rows="10"></textarea>
+          <textarea [(ngModel)]="formCreds.description" name="description"  cols="20" rows="1"></textarea>
         </label>
       </div>
 
+      <div class="form-group">
+          <label for="descriptif">
+            Description : 
+            <br>
+            <textarea [(ngModel)]="formCreds.descriptif" name="descriptif"  cols="30" rows="10"></textarea>
+          </label>
+        </div>
+
+        
       <div class="form-group">
           <label for="nameWritter">
             Your Name

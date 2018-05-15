@@ -64,6 +64,8 @@ export class Article {
   type : string ; 
   like : number;
   danger : string;
+  descriptif : string; 
+
 };
 
 export class Creds {
@@ -78,6 +80,7 @@ export class Creds {
   type : string ; 
   coordinates: number[];
   danger : string; 
+  descriptif : string; 
   // like : number = 0;
 
 };
