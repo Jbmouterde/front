@@ -1,72 +1,105 @@
-<h2>Reports Display</h2>
 
-<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
-    <!-- <agm-marker [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
+ <!-- image background -->
+ <div class="row top-photo" >
 
-
- <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
-
-        <agm-marker [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
-          </agm-marker>
-    </div>
-
-   
-  </agm-map>
-
-<div class="btn"> 
-      <button class="btn btn-outline-primary" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
-      <button class="btn btn-outline-secondary" (click)="setTypeFilter('Interview')"> Interview  </button>
-      <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
-      <button class="btn btn-outline-warning" (click)="setTypeFilter('Story')"> Story      </button>
-      <button class="btn btn-outline-info" (click)="setTypeFilter('Publication')"> Publication </button>
-</div>
-
-<label>
- Filter reports by title
-  <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
-</label>
-<button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
-<br>
-<br>
-
-<div class="reports-container">
-  
-  
- 
-  <ul> 
-      <li *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
-      <div class="card" style="width: 34rem; height: 10em;  background: #d1ccc0;" >
-          
-          <div class="card-body">
-            <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
-
-            <p class="card-text">Organization : {{oneArticle.organization}}</p>
-            
-              <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> See Details</a>
-              <br>
-              <br>
-          </div>
-        </div>
-      </li>
-  </ul>
-</div>
-
-
-
-
-<div class="container" id="grid-article">
-    <div class="card" *ngFor="let oneArticle of articles">
-  
-        <h4>{{oneArticle.title}}</h4>
+    <div class="col-12">
        
-        <button (click)="increaseCount(oneArticle._id)">+1</button>
-        <p> Number of reaction : {{oneArticle.like}} </p>
-         
-        <!-- <b> {{myCount}}</b> -->
-        <p>Organization: {{oneArticle.organization}}</p>
-        <img [src]="oneArticle.imageUrl">
-      </div>   
     </div>
+</div>
+
+<!-- filter and titles display -->
+<div class="row">
+  <div class="col-6">
+     <h3>World Map</h3>
+  </div>
+  <div class="col-6" max-width="100%">
+      <!-- <h3>Reports</h3> -->
+      <div class="btn"> 
+            <button class="btn btn-outline-success" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
+            <button class="btn btn-outline-success" (click)="setTypeFilter('Interview')"> Interview  </button>
+            <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
+            <br>
+            <button class="btn btn-outline-success" (click)="setTypeFilter('Story')"> Story      </button>
+          
+            <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button>
+            <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- map and articles display -->
+
+<div class="row main-row">
+  <div class="col-6">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
+      <!-- <agm-marker [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
+      
+      
+      <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
+        
+        <agm-marker [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
+        </agm-marker>
+      </div>
+      
+      
+    </agm-map>
+    
+  </div>
+  <div class="col-6">
+        <label>
+          Filter reports by title
+          <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
+        </label>
+        <br>
+        <br>
+    
+        <div class="reports-container">
+          
+          
+         
+          <ul> 
+              <li *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter)">
+              <div class="card" style="width: 34rem; height: 10em;  background: #d1ccc0;" >
+                  
+                  <div class="card-body">
+                    <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
+        
+                    <p class="card-text">Organization : {{oneArticle.organization}}</p>
+                    
+                      <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> See Details</a>
+                      <br>
+                      <br>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+  </div>
+</div>
+
+
+
+<!-- artciles  grid  -->
+
+    <div class="container" id="grid-article">
+        <div class="card" *ngFor="let oneArticle of articles">
+      <!-- <div *ngIf="articles.length = 3"> -->
+            <h4>{{oneArticle.title}}</h4>
+           
+            <button (click)="increaseCount(oneArticle._id)">+1</button>
+            <p> Number of reaction : {{oneArticle.like}} </p>
+             
+            <!-- <b> {{myCount}}</b> -->
+            <p>Organization: {{oneArticle.organization}}</p>
+            <img [src]="oneArticle.imageUrl">
+          </div>   
+        </div>
+   
+  
+
+
 
 
 
