@@ -11,8 +11,6 @@ export class RouteoneComponent implements OnInit {
   // OTHER PIE
   article = Article;
 
-  
-
   public doughnutChartLabels:string[] = ['Personal Information', 'Interview', 'Story', 'Projects', 'Publication'];
   public doughnutChartData:number[] = [50, 30, 15, 5, 0];
   public doughnutChartType:string = 'doughnut';
@@ -23,6 +21,10 @@ export class RouteoneComponent implements OnInit {
     console.log(e);
   }
  
+  
+public dataDonut(){
+  return 31 + 1; 
+}
 
   public chartHovered(e:any):void {
     console.log(e);

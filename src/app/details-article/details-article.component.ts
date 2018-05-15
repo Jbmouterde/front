@@ -84,18 +84,8 @@ export class DetailsArticleComponent implements OnInit , AfterViewInit, OnDestro
             console.log(err)
           })
         }
+ 
         ngAfterViewInit() {
-          // const style = {
-          //   base: {
-          //     lineHeight: '24px',
-          //     fontFamily: 'monospace',
-          //     fontSmoothing: 'antialiased',
-          //     fontSize: '19px',
-          //     '::placeholder': {
-          //       color: 'purple'
-          //     }
-          //   }
-          // }
           this.card = elements.create('card');
           this.card.mount(this.cardInfo.nativeElement);
       
@@ -126,5 +116,6 @@ export class DetailsArticleComponent implements OnInit , AfterViewInit, OnDestro
             // ...send the token to the your backend to process the charge
           }
         }
-}
+      }
+      
 
