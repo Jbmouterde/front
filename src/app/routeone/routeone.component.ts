@@ -14,17 +14,17 @@ export class RouteoneComponent implements OnInit {
   public doughnutChartLabels:string[] = ['Personal Information', 'Interview', 'Story', 'Projects', 'Publication'];
   public doughnutChartData:number[] = [50, 30, 15, 5, 0];
   public doughnutChartType:string = 'doughnut';
- 
+  public dataDonut(){
+    return 31 ; 
+  }
 
   // events
   public chartClicked(e:any):void {
     console.log(e);
   }
  
-  
-public dataDonut(){
-  return 31 + 1; 
-}
+
+
 
   public chartHovered(e:any):void {
     console.log(e);
