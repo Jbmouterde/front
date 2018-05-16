@@ -4,16 +4,18 @@
 
     <div class="col-12 text">
        <h2>GetInvolved</h2>
-       <p> How are people and nature affected by changes in weather and climate? <br>
+       <p> How many species are in danger ? How is it possible to help this cause ?  <br>
 
-        See our collection of data, submit your own observations, and explore <br>
+        See our collection of data, submit your own observations, donate money to us  <br> and explore 
         
         adaptation solutions. <br>
         
          
-        
-        Join the Climate Crowd!</p>
-        <button> Add a Report</button>
+        <br> 
+        <br>
+        Get Involved Now!</p>
+        <a routerLink="/add-report">
+        <button class=" btn btn-success add"> Add a Report</button></a>
     </div>
 </div>
 <!-- Search bar-->
@@ -34,8 +36,10 @@
 
 
 <!-- artciles  grid  -->
-<div class="rowi">
-<div class="container" id="grid-article">
+
+<div class="container-fluid" id="grid-article">
+    <div class="rowi row">
+      <!-- <div class="card-deck"> -->
     <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
   <!-- <div *ngIf="articles.length = 3"> -->
         <h4>{{oneArticle.title}}</h4>
@@ -59,7 +63,7 @@
         </div>
       </div>   
     </div>
-
+  <!-- </div> -->
   </div>
 
 <!-- map and articles display -->

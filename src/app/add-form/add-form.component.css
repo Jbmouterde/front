@@ -1,3 +1,27 @@
 agm-map {
-  height: 400px
+  height: 700px;
+
+  /* padding-top : 200px; */
+}
+
+
+.form-group{
+  width: 100%
+}
+
+.ok {
+padding-left : 100px
+
+}
+
+.o{
+  text-align : center
+}
+h3{
+  text-align : center;
+}
+
+.espace{
+  padding-bottom : 100px;
+  padding-top : 200px;
 }

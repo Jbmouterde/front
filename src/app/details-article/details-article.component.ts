@@ -46,8 +46,6 @@ export class DetailsArticleComponent implements OnInit , AfterViewInit, OnDestro
      this.fetchPhoneData();
     });
 
-
-
   }
  
 
