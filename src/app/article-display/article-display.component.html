@@ -42,6 +42,7 @@
       <!-- <div class="card-deck"> -->
     <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
   <!-- <div *ngIf="articles.length = 3"> -->
+    <div class="ca">
         <h4>{{oneArticle.title}}</h4>
        
         <p>{{oneArticle.organization}}</p>
@@ -50,8 +51,9 @@
         <!-- <b> {{myCount}}</b> -->
         <img [src]="oneArticle.imageUrl">
         <p>{{oneArticle.description}}</p>
-        <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
-          <button> Read More</button>
+      </div>
+      <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
+          <button class="btn btn-success"> Read More</button>
         </a>
 
         
@@ -87,10 +89,36 @@
     
   </div>
   <!-- reports display -->
-  <!-- <div class="col-4">
-      
-    
-        <div class="reports-container">
+  <div class="col-4">
+    <hr>
+    <p> Search by Species </p>
+       <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
+             <br>
+             <br>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
+           
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button>
+<hr>
+             <p> Search by level of Danger </p>
+             <button class="btn btn-outline-success" (click)="setDangerFilter('In Danger')"> In Danger     </button>
+           
+             <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
+             <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>
+             <hr> 
+             <p> Search by Types of Reports </p>
+             <button class="btn btn-outline-success" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
+             <button class="btn btn-outline-success" (click)="setTypeFilter('Interview')"> Interview  </button>
+             <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
+             <br>
+             <br>
+             <button class="btn btn-outline-success" (click)="setTypeFilter('Story')"> Story      </button>
+           
+             <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button>
+    </div>
+        <!-- <div class="reports-container">
           
           
          
@@ -110,7 +138,7 @@
               </li>
           
         </div>
-  </div> -->
+  </div>  -->
 </div>
 
 <!-- filter and titles display -->
@@ -131,19 +159,8 @@
             
               <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button> -->
              <!-- species filter -->
-             <!-- <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
-             <br>
-             <br>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
-           
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button> -->
-             <!-- <button class="btn btn-outline-success" (click)="setDangerFilter('In Danger')"> In Danger     </button>
-           
-             <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
-             <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>  -->
+             <!-- -->
+             <!--   -->
   
   <!-- add reports -->
                 <!-- <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
