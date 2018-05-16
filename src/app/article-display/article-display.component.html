@@ -99,32 +99,17 @@
     <hr>
     <p> Search by Species </p>
        <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')" (click)="toggleDescriptionClass()"> 🐼 </button>
-       <div [ngClass]="classState" class="see-more">
-          <p> Mammals </p>
-   
-        </div>
+ 
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')" (click)="toggleDescriptionClass()"> 🦎 </button>
-             <div [ngClass]="classState" class="see-more">
-                <p> Reptiles </p>
-         
-              </div>
+        
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')" (click)="toggleDescriptionClass()">  🕊   </button>
-             <div [ngClass]="classState" class="see-more">
-                <p> Birds </p>
-         
-              </div>
+          
            
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')" (click)="toggleDescriptionClass()"> 🕷    </button>
-             <div [ngClass]="classState" class="see-more">
-                <p> Insects </p>
-         
-              </div>
+          
            
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')" (click)="toggleDescriptionClass()"> 🐳 </button>
-             <div [ngClass]="classState" class="see-more">
-                <p>Aquatic Animals </p>
-         
-              </div>
+        
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button>
 <hr>
              <p> Search by level of Danger </p>
@@ -133,12 +118,21 @@
              <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
              <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>
              <hr> 
-             <div class="circle">
+             <div class="container">
+
+             <div class="row">
+             <div class="circle col">
                <br>
                <br>
             <p> Species in Danger <br> </p><div class="chfi">{{a}}</div>
+          </div>
+            <div [ngClass]="classState" class="see-more col chfi">
+                <p> Mammals </p>
+              
+              </div>
 </div>
-   
+</div>
+<!--  -->
     </div>
         <!-- <div class="reports-container">
           

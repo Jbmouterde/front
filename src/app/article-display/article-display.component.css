@@ -2,10 +2,9 @@
   /* position: relative; */
 
   border: 2px solid #BD9016;
-  width: 150px;
-  height: 150px;
+  /* width: 150px;
+  height: 150px; */
   border-radius: 100px;
-
   transition: all 1s ease 500ms;
 }
 
@@ -131,13 +130,17 @@ agm-map {
 } */
 
 .see-more {
-  background: wheat;
+float : left; 
+border: 2px solid #BD9016;
+/* width: 150px;
+height: 150px; */
+border-radius: 100px;
+/* float: left; */
+
+transition: all 1s ease 500ms;  
 }
 
-.see-more a {
-  padding-left: 50px;
-  
-}
+
 
 .headlines li {
   list-style-type: none;
