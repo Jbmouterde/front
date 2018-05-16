@@ -2,6 +2,48 @@ img {
   height: 300px;
   width: 400px;
 }
+.rock{
+  width:200px;
+    background:lightgray;
+    margin: 100px auto;
+    text-align:center;
+    padding:20px;
+    font-size:1.5em;
+}
+.button1{
+  position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+.button1:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button1:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
 
 h2 {
 margin-top: 40px;
@@ -55,10 +97,10 @@ agm-map {
   /* margin-top: 120px; */
 }
 
-p {
+/* p {
   padding-left: 20px;
   padding-top: 10px;
-}
+} */
 
 .see-more {
   background: wheat;
@@ -88,6 +130,7 @@ p {
 .reports-container li {
   list-style-type: none;
 }
+
 
 .separator-type, .title-type, .intro-type, .content-type .intro-type p {
   position: relative;

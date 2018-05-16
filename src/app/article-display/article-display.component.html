@@ -12,7 +12,7 @@
   <div class="col-6">
      <h3>World Map 🌍</h3>
   </div>
-  <div class="col-6" max-width="100%">
+  <div class="col-6">
       <!-- <h3>Reports</h3> -->
       <div class="btn"> 
             <button class="btn btn-outline-success" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
@@ -105,7 +105,7 @@
       <!-- <div *ngIf="articles.length = 3"> -->
             <h4>{{oneArticle.title}}</h4>
            
-            <button (click)="increaseCount(oneArticle._id)"><i class="fa fa-thumbs-o-up"></i></button>
+            <button (click)="increaseCount(oneArticle._id)" (click)= 'sendEvent()' class="rock button1" [@myAwesomeAnimation]='state' (click)="animateMe()"><i class="fa fa-thumbs-o-up"></i></button>
             
             <p> Number of reaction : {{oneArticle.like}} </p>
              
