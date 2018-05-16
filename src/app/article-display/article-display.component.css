@@ -2,7 +2,11 @@ img {
   height: 300px;
   width: 400px;
 }
-
+.add{
+  height: 100px;
+  font-size: 2000px;
+  /* width: 200px */
+}
 .text {
   text-align: center;
   color: rgba(255, 255, 255, 0.897);
