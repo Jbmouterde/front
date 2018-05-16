@@ -36,7 +36,7 @@ import { Router, NavigationEnd } from '@angular/router';
   ]
 })
 export class ArticleDisplayComponent implements OnInit {
- 
+ a : number; 
   state: string = 'small';
   animateMe() {
     this.state = (this.state === 'small' ? 'large' : 'small');
@@ -67,6 +67,7 @@ export class ArticleDisplayComponent implements OnInit {
 
   // this.locationChosen = true
 }
+
 // markerIconUrl() {
 //   return require('../../assets/images/image.png')
 // }
@@ -98,6 +99,8 @@ classState : any = {
   }
 
   ngOnInit() {
+ 
+
     this.apiTruc.getNews()
     // .then((result : News[])=>{
       .then((result : any)=>{
@@ -117,8 +120,11 @@ classState : any = {
 
     this.apiTruc.getList()
     .then((result : Article[])=>{
-      this.articles = result
-      console.log(result)
+      this.articles = result; 
+      this.a = this.articles.length;
+   
+  
+      console.log(result, "ok")
     })
     .catch((err)=>{
       console.log("Article list error")
@@ -179,5 +185,6 @@ toggleDescriptionClass(){
   setDangerFilter(filterName) {
     this.dangerFilter = filterName
   }
+
 }
 

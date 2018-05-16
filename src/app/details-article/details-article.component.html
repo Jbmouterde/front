@@ -1,10 +1,9 @@
-
 <div class="container">
-   
-<div class="container vri">
+<div class="container">
+   <div class="row">
+<div class="card cardi col-6">
   <h3> {{article?.title}}</h3>
 <p> written by {{article?.nameWritter}} for <strong>{{article?.organization}}</strong> </p>
-<p> {{article?.descriptif}}</p>
 <img *ngIf="article?.imageUrl" [src]='article?.imageUrl'/> 
 <div *ngIf="userTruc.currentUser.role == 'admin'">
     <button (click)="deleteClick()"> Delete </button>
@@ -21,13 +20,21 @@
   <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
     class="fb-xfbml-parse-ignore">Share Your Trip</a>                
 </div>
-               
+</div>        
     
 
+<div class="col-6 test card">
+    <p> {{article?.descriptif}} Le Mauna Loa, terme hawaïen signifiant littéralement « longue montagne », est un volcan rouge actif situé aux États-Unis, dans l'archipel d'Hawaï (État d'Hawaï). Culminant à 4 170 mètres d'altitude, c'est le deuxième plus haut sommet de l'île d'Hawaï après le Mauna Kea. Le Mauna Loa est le plus haut volcan du monde : il s'élève à 17 kilomètres au-dessus de sa base, qui s'enfonce dans le plancher océanique, et la superficie de sa partie émergée, 5 271 km2, représente plus de la moitié de la surface de l'île. Le Mauna Loa, qui est un volcan bouclier caractérisé par des laves fluides pauvres en silice, a été créé par un point chaud à l'origine de la formation de l'archipel des Îles Hawaï. Le volcan est couronné par une grande caldeira et traversé par deux rifts sur toute sa longueur, d'où partent la très grande majorité des coulées de laves. Depuis le xixe siècle, ces éruptions se sont produites en moyenne tous les cinq ans, bien que la dernière remonte à 1984. Elles ont à plusieurs reprises menacé et, dans certains cas, détruit des installations humaines. Un réseau de surveillance sismique très dense a été mis en place pour anticiper les sursauts de l'activité volcanique et ainsi prévenir les risques pour la population.
 
+        Le climat, l'isolement et la nature des sols du Mauna Loa sont à l'origine de nombreuses espèces endémiques de la faune et la flore. Bien qu'elles soient protégées et qu'une grande partie du volcan fasse partie du parc national des volcans d'Hawaï, ces espèces sont aujourd'hui fortement menacées par les activités humaines. Les conditions atmosphériques particulières qui règnent au sommet du Mauna Loa ont permis l'installation en 1957 d'un observatoire qui joue un rôle notable dans la mesure de la qualité de l'air, la quantité de gaz à effet de serre, et les recherches sur la haute atmosphère. C'</p>
+    
+
+</div>
 </div>
 
 <hr> 
+
+</div>
 <button class="btn"><a routerLink="/"> Back </a> </button>
 
 
