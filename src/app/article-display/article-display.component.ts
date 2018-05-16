@@ -126,8 +126,20 @@ classState : any = {
     })
   }
 
-  /// UPDATE TEST 
-// this.apiTruc.updateLike(this.articleId, Credd)
+  /// UPDATE TEST db.photos.update(
+//     { 
+//       "_id": ObjectId("54bb201aa3a0f26f885be2a3"), 
+//       "likes": { "$ne": ObjectId("54bb2244a3a0f26f885be2a4") }
+//   },
+//   {
+//       "$inc": { "likeCount": 1 },
+//       "$push": { "likes": ObjectId("54bb2244a3a0f26f885be2a4") }
+//   }
+// )
+// increaseLike(id: string) {
+
+//   this.apiTruc.updateLike(this.articleId, Credd)
+// }
 
 // 
 // btn see more on the article 
@@ -136,18 +148,16 @@ toggleDescriptionClass(){
 }
 
   // TEST BUTTON +1 
-  increaseCount(id: string){
-    
-      
+  increaseCount(oneArticle: Article){
+    this.apiTruc.updateLike(oneArticle._id)
+      .then((result: Article) => {
+        oneArticle.likes = result.likes;
+      })
+      .catch((err)=>{
+        console.log("Article LIKE error")
+        console.log(err)
+      });
      
-      this.articles.forEach((oneArticle, index) => {
-        if (oneArticle._id === id) {
-          oneArticle.like += 1;
-          console.log(oneArticle.like)
-        
-        }
-     });
-
     }
       
       

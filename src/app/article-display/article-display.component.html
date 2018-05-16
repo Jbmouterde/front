@@ -53,8 +53,8 @@
         
         <div>
 
-          <button (click)="increaseCount(oneArticle._id)" (click)= 'sendEvent()' class="rock button1" [@myAwesomeAnimation]='state' (click)="animateMe()"><i class="fa fa-thumbs-o-up"></i></button>
-          <p class="likes">#{{oneArticle.like}} </p>
+          <button (click)="increaseCount(oneArticle)" (click)= 'sendEvent()' class="rock button1" [@myAwesomeAnimation]='state' (click)="animateMe()"><i class="fa fa-thumbs-o-up"></i></button>
+          <p class="likes">#{{oneArticle.likes.length}} </p>
 
         </div>
       </div>   

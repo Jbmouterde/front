@@ -42,11 +42,11 @@ delete(articleId){
 }
 // UPDATE likes 
 
-// updateLike(articleId, Credd){
-//   return this.ajaxTruc
-//   .put(`http://localhost:3000/api/articles/${articleId}`, Credd)
-//   .toPromise();
-// }
+updateLike(articleId){
+  return this.ajaxTruc
+  .put(`http://localhost:3000/api/articles/${articleId}/like`, {}, {withCredentials: true})
+  .toPromise();
+}
 //
 // API NEWS 
 getNews(){
@@ -55,11 +55,6 @@ getNews(){
 }
 
 }
-
-
-// export class Credd{
-//   like : number; 
-// }
 
 export class Article {
   _id : string; 
@@ -74,7 +69,7 @@ export class Article {
   organization : string; 
   species : string; 
   type : string ; 
-  like : number;
+  likes : string[];
   danger : string;
   descriptif : string; 
 
