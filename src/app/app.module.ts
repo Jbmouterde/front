@@ -30,6 +30,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NewsComponent } from './news/news.component';
 import { SpeciesPipe } from './pipes/species.pipe';
 import { DangerPipe } from './pipes/danger.pipe';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { DangerPipe } from './pipes/danger.pipe';
   imports: [
     GooglePlaceModule,
     BrowserModule,
+    AgmSnazzyInfoWindowModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,

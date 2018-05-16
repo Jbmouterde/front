@@ -80,7 +80,12 @@
       
       <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
           <!-- [iconUrl]=" markerIconUrl()" -->
-        <agm-marker  [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
+        <agm-marker  [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]"> 
+            <agm-info-window > {{oneArticle.title}}  <br>    <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
+              <button class="btn btn-success"> Read More</button>
+            </a>
+            </agm-info-window>
+       
         </agm-marker>
       </div>
       
@@ -95,8 +100,7 @@
        <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
-             <br>
-             <br>
+           
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
            
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
@@ -112,8 +116,7 @@
              <button class="btn btn-outline-success" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
              <button class="btn btn-outline-success" (click)="setTypeFilter('Interview')"> Interview  </button>
              <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
-             <br>
-             <br>
+      
              <button class="btn btn-outline-success" (click)="setTypeFilter('Story')"> Story      </button>
            
              <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button>

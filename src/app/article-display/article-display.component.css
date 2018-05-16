@@ -219,7 +219,9 @@ figure {
   opacity: 1;
 }
 
-
+agm-info-window {
+  height : 200px
+}
 .col-3 {
   float: left;
   width: 25%;
