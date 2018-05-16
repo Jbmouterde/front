@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticleService, Article, News } from '../services/article.service';
+import { ArticleService, Article, News, Credd } from '../services/article.service';
 import { ViewChild } from '@angular/core';
 import { } from '@types/googlemaps';
 
@@ -49,6 +49,7 @@ export class ArticleDisplayComponent implements OnInit {
   speciesFilter : string; 
   dangerFilter : string;
   userInput: string;
+  articleId : string; 
   typeFilter: string;
   news : Array<News> = [];
  latitude = 51.678418;
@@ -124,6 +125,11 @@ classState : any = {
       console.log(err)
     })
   }
+
+  /// UPDATE TEST 
+// this.apiTruc.updateLike(this.articleId, Credd)
+
+// 
 // btn see more on the article 
 toggleDescriptionClass(){
   this.classState.descriptionYolo = !this.classState.descriptionYolo;
