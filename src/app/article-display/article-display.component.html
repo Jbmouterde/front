@@ -98,13 +98,33 @@
   <div class="col-4">
     <hr>
     <p> Search by Species </p>
-       <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
+       <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')" (click)="toggleDescriptionClass()"> 🐼 </button>
+       <div [ngClass]="classState" class="see-more">
+          <p> Mammals </p>
+   
+        </div>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')" (click)="toggleDescriptionClass()"> 🦎 </button>
+             <div [ngClass]="classState" class="see-more">
+                <p> Reptiles </p>
+         
+              </div>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')" (click)="toggleDescriptionClass()">  🕊   </button>
+             <div [ngClass]="classState" class="see-more">
+                <p> Birds </p>
+         
+              </div>
            
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')" (click)="toggleDescriptionClass()"> 🕷    </button>
+             <div [ngClass]="classState" class="see-more">
+                <p> Insects </p>
+         
+              </div>
            
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')" (click)="toggleDescriptionClass()"> 🐳 </button>
+             <div [ngClass]="classState" class="see-more">
+                <p>Aquatic Animals </p>
+         
+              </div>
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button>
 <hr>
              <p> Search by level of Danger </p>
