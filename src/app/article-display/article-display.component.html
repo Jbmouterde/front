@@ -2,7 +2,7 @@
  <!-- image background main-page -->
  <div class="row top-photo" >
 
-    <div class="col-12">
+    <div class="col-12 text">
        <h2>GetInvolved</h2>
        <p> How are people and nature affected by changes in weather and climate? <br>
 
@@ -34,7 +34,7 @@
 
 
 <!-- artciles  grid  -->
-
+<div class="rowi">
 <div class="container" id="grid-article">
     <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
   <!-- <div *ngIf="articles.length = 3"> -->
@@ -60,11 +60,13 @@
       </div>   
     </div>
 
-
+  </div>
 
 <!-- map and articles display -->
 
 <div class="row main-row">
+
+  <!-- map display -->
   <div class="col-8">
     <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
       <!-- <agm-marker [iconUrl]=" markerIconUrl()" [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
@@ -80,16 +82,17 @@
     </agm-map>
     
   </div>
-  <div class="col-4">
+  <!-- reports display -->
+  <!-- <div class="col-4">
       
     
         <div class="reports-container">
           
           
          
-          <ul> 
+          
               <li *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
-              <div class="card" style="width: 34rem; height: 10em;  background: #d1ccc0;" >
+              <div class="card">
                   
                   <div class="card-body">
                     <h3> {{oneArticle.title}} by {{oneArticle.nameWritter}}</h3>
@@ -101,20 +104,20 @@
                   </div>
                 </div>
               </li>
-          </ul>
+          
         </div>
-  </div>
+  </div> -->
 </div>
 
 <!-- filter and titles display -->
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-6">
        <h3>World Map 🌍</h3>
     </div>
-    <div class="col-6">
+    <div class="col-6"> -->
         <!-- <h3>Reports</h3> -->
-        <div class="btn"> 
+        <!-- <div class="btn"> 
               <button class="btn btn-outline-success" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
               <button class="btn btn-outline-success" (click)="setTypeFilter('Interview')"> Interview  </button>
               <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
@@ -122,7 +125,7 @@
               <br>
               <button class="btn btn-outline-success" (click)="setTypeFilter('Story')"> Story      </button>
             
-              <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button>
+              <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button> -->
              <!-- species filter -->
              <!-- <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
@@ -139,26 +142,26 @@
              <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>  -->
   
   <!-- add reports -->
-                <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
+                <!-- <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
              
         </div>
     </div>
   </div>
   
-  
+   -->
 
 
 
 
 
 
-    <ul> 
+    <!-- <ul> 
       <h2 class="headlines"> NATIONAL GEOGRAPHICS NEWS </h2>
       <br>
         <li *ngFor="let oneNews of news" id="headline">
-            <div class="card" >
+            <div class="card" > -->
             <!-- <div class="card-body"> -->
-              <p> <b>{{oneNews.title}}</b>  </p>
+              <!-- <p> <b>{{oneNews.title}}</b>  </p>
                 
                 <button (click)="toggleDescriptionClass()"> See more</button>
             
@@ -171,4 +174,4 @@
           </div>
         </li>
         
-    </ul>
+    </ul> -->
