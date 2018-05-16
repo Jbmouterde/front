@@ -37,6 +37,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class ArticleDisplayComponent implements OnInit {
  a : number; 
+ b : number; 
   state: string = 'small';
   animateMe() {
     this.state = (this.state === 'small' ? 'large' : 'small');
@@ -122,7 +123,7 @@ classState : any = {
     .then((result : Article[])=>{
       this.articles = result; 
       this.a = this.articles.length;
-   
+    //  this.b = result.
   
       console.log(result, "ok")
     })

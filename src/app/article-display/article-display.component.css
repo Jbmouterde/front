@@ -73,7 +73,6 @@ padding-left: 30px;
 color: darkgreen;
 }
 
-
 .reports-container { 
   float: left;
   overflow: scroll;
@@ -84,7 +83,8 @@ color: darkgreen;
 
 #report-seach {
   border-radius: 6px;
-  color: wheat
+  color: wheat;
+  width: 500px;
   
 }
 
