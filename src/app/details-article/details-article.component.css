@@ -5,18 +5,30 @@ img {
 }
 .container{
   text-align : center;
+  margin-top : 100px
  
 }
-.vri {
+ /* .vri {
   border : 2px solid grey; 
   height : 100%;
   border-radius : 10px
+} */
+
+.cardi{
+float : left ;
+}
+.test {
+  float : left ;
+  height : 500px;
+  overflow: scroll;
+
+
 }
 button {
   background: salmon;
   color: wheat;
 
-}
+} 
 
 .StripeElement {
   background-color: white;
