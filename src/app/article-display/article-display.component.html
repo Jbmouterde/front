@@ -36,8 +36,10 @@
 
 
 <!-- artciles  grid  -->
-<div class="rowi">
-<div class="container" id="grid-article">
+
+<div class="container-fluid" id="grid-article">
+    <div class="rowi row">
+      <!-- <div class="card-deck"> -->
     <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
   <!-- <div *ngIf="articles.length = 3"> -->
         <h4>{{oneArticle.title}}</h4>
@@ -61,7 +63,7 @@
         </div>
       </div>   
     </div>
-
+  <!-- </div> -->
   </div>
 
 <!-- map and articles display -->
