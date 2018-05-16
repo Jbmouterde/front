@@ -52,12 +52,12 @@
 <div class="row main-row">
   <div class="col-6">
     <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
-      <!-- <agm-marker [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
+      <!-- <agm-marker [iconUrl]=" markerIconUrl()" [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
       
       
       <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
-        
-        <agm-marker [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
+          <!-- [iconUrl]=" markerIconUrl()" -->
+        <agm-marker  [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]">  
         </agm-marker>
       </div>
       
