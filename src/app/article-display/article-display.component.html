@@ -16,51 +16,56 @@
         <button> Add a Report</button>
     </div>
 </div>
-<!--  -->
-<!-- filter and titles display -->
+<!-- Search bar-->
 <div class="row">
-  <div class="col-6">
-     <h3>World Map 🌍</h3>
-  </div>
-  <div class="col-6">
-      <!-- <h3>Reports</h3> -->
-      <div class="btn"> 
-            <button class="btn btn-outline-success" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
-            <button class="btn btn-outline-success" (click)="setTypeFilter('Interview')"> Interview  </button>
-            <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
-            <br>
-            <br>
-            <button class="btn btn-outline-success" (click)="setTypeFilter('Story')"> Story      </button>
-          
-            <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button>
-           <!-- species filter -->
-           <!-- <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
-           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
-           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
-           <br>
-           <br>
-           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
-         
-           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
-           <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button> -->
-           <!-- <button class="btn btn-outline-success" (click)="setDangerFilter('In Danger')"> In Danger     </button>
-         
-           <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
-           <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>  -->
+  <div class="col-12">
 
-<!-- add reports -->
-              <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
-           
-      </div>
+    <label>
+        Filter reports by title
+        <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
+      </label>
+      <br>
+      <br>
+
   </div>
 </div>
+
+
+
+
+<!-- artciles  grid  -->
+
+<div class="container" id="grid-article">
+    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
+  <!-- <div *ngIf="articles.length = 3"> -->
+        <h4>{{oneArticle.title}}</h4>
+       
+        <p>{{oneArticle.organization}}</p>
+        
+        
+        <!-- <b> {{myCount}}</b> -->
+        <img [src]="oneArticle.imageUrl">
+        <p>{{oneArticle.description}}</p>
+        <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
+          <button> Read More</button>
+        </a>
+
+        
+        <div>
+
+          <button (click)="increaseCount(oneArticle._id)" (click)= 'sendEvent()' class="rock button1" [@myAwesomeAnimation]='state' (click)="animateMe()"><i class="fa fa-thumbs-o-up"></i></button>
+          <p class="likes">#{{oneArticle.like}} </p>
+
+        </div>
+      </div>   
+    </div>
 
 
 
 <!-- map and articles display -->
 
 <div class="row main-row">
-  <div class="col-6">
+  <div class="col-8">
     <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
       <!-- <agm-marker [iconUrl]=" markerIconUrl()" [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
       
@@ -75,13 +80,8 @@
     </agm-map>
     
   </div>
-  <div class="col-6">
-        <label>
-          Filter reports by title
-          <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
-        </label>
-        <br>
-        <br>
+  <div class="col-4">
+      
     
         <div class="reports-container">
           
@@ -106,25 +106,45 @@
   </div>
 </div>
 
+<!-- filter and titles display -->
 
-
-<!-- artciles  grid  -->
-
-    <div class="container" id="grid-article">
-        <div class="card" *ngFor="let oneArticle of articles">
-      <!-- <div *ngIf="articles.length = 3"> -->
-            <h4>{{oneArticle.title}}</h4>
-           
-            <button (click)="increaseCount(oneArticle._id)" (click)= 'sendEvent()' class="rock button1" [@myAwesomeAnimation]='state' (click)="animateMe()"><i class="fa fa-thumbs-o-up"></i></button>
+<div class="row">
+    <div class="col-6">
+       <h3>World Map 🌍</h3>
+    </div>
+    <div class="col-6">
+        <!-- <h3>Reports</h3> -->
+        <div class="btn"> 
+              <button class="btn btn-outline-success" (click)="setTypeFilter('Personal Information')"> Personal Information</button>
+              <button class="btn btn-outline-success" (click)="setTypeFilter('Interview')"> Interview  </button>
+              <button class="btn btn-outline-success" (click)="setTypeFilter('Project')"> Project    </button>
+              <br>
+              <br>
+              <button class="btn btn-outline-success" (click)="setTypeFilter('Story')"> Story      </button>
             
-            <p> Number of reaction : {{oneArticle.like}} </p>
+              <button class="btn btn-outline-success" (click)="setTypeFilter('Publication')"> Publication </button>
+             <!-- species filter -->
+             <!-- <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
+             <br>
+             <br>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
+           
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button> -->
+             <!-- <button class="btn btn-outline-success" (click)="setDangerFilter('In Danger')"> In Danger     </button>
+           
+             <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
+             <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>  -->
+  
+  <!-- add reports -->
+                <button class="btn btn-primary" id="report-button"> <a routerLink="/add-report">Add a report</a> </button>
              
-            <!-- <b> {{myCount}}</b> -->
-            <p>Organization: {{oneArticle.organization}}</p>
-            <img [src]="oneArticle.imageUrl">
-          </div>   
         </div>
-   
+    </div>
+  </div>
+  
   
 
 

@@ -64,7 +64,7 @@ import { DangerPipe } from './pipes/danger.pipe';
     BrowserAnimationsModule,
     ChartsModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyDG1XWykr6YhJ9TfbxtU8RSGKEfurrgn8Y",
+      apiKey: "AIzaSyAbsDqOb54l-4NXptl4QZz17OieIkHGq6I",
       libraries: ["places"]
     })
   ],

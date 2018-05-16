@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticleService, Article, News, Credd } from '../services/article.service';
+import { ArticleService, Article, News} from '../services/article.service';
 import { ViewChild } from '@angular/core';
 import { } from '@types/googlemaps';
 
@@ -67,9 +67,9 @@ export class ArticleDisplayComponent implements OnInit {
 
   // this.locationChosen = true
 }
-markerIconUrl() {
-  return require('../../assets/images/image.png')
-}
+// markerIconUrl() {
+//   return require('../../assets/images/image.png')
+// }
 
 classState : any = {
 
