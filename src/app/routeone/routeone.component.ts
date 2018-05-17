@@ -12,6 +12,7 @@ export class RouteoneComponent implements OnInit {
   article = Article;
   articles : Article[] = [];
 
+  // @Input('number') public num : number; 
 a : number = 0
 b : number = 10
 c : number = 34
@@ -19,32 +20,32 @@ d : number = 4
 e : number = 10
 jack : number = 0
 
-public dataDonut(){
-  const that = this
-  this.articles.forEach((oneArticle) => {
-    if (oneArticle.species == 'Mammals'){
-      that.b ++ 
-    }
-    else if(oneArticle.species == 'Reptiles'){
-      that.c ++
-    }
-    else if(oneArticle.species == 'Aquatic Animals'){
-        const jack = that.d ++
-    }
-    else if(oneArticle.species == 'Insects'){
-      that.e ++
-    }
-    else if(oneArticle.species == 'Birds'){
-      that.a ++
-      console.log(that.a)
-    }
-  })
-}
+// public dataDonut(){
+//   const that = this
+//   this.articles.forEach((oneArticle) => {
+//     if (oneArticle.species == 'Mammals'){
+//       that.b ++ 
+//     }
+//     else if(oneArticle.species == 'Reptiles'){
+//       that.c ++
+//     }
+//     else if(oneArticle.species == 'Aquatic Animals'){
+//         const jack = that.d ++
+//     }
+//     else if(oneArticle.species == 'Insects'){
+//       that.e ++
+//     }
+//     else if(oneArticle.species == 'Birds'){
+//       that.a ++
+//       console.log(that.a)
+//     }
+//   })
+// }
 
 
 
   public doughnutChartLabels:string[] = ['Insects', 'Mammals', 'Aquatic Animals', 'Birds', 'Reptiles'];
-  public doughnutChartData:number[] = [this.jack, this.b, this.d,this.c, this.e];
+  public doughnutChartData :number[] = [this.jack, this.b, this.d,this.c, this.e];
   public doughnutChartType:string = 'doughnut';
 
 

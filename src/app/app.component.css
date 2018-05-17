@@ -8,8 +8,8 @@ img {
  }
 #logo {
   padding: 9px;
-  background: salmon;
-  color: wheat;
+  /* background: salmon; */
+  /* color: wheat; */
   font-size: 15px;
   border-radius: 8px;
 }
@@ -21,10 +21,10 @@ img {
   margin-right: 10px;
 }
 footer{
+  background-color : #212529;
 clear: both;
 color: lightgrey;
-background-color : white;
-padding-left:0;
+
 }
 h6 a {
   text-decoration: none; 

@@ -6,17 +6,19 @@
 <p> written by {{article?.nameWritter}} for <strong>{{article?.organization}}</strong> </p>
 <img *ngIf="article?.imageUrl" [src]='article?.imageUrl'/> 
 <div *ngIf="userTruc.currentUser.role == 'admin'">
-    <button (click)="deleteClick()"> Delete </button>
+    <button class="btn" (click)="deleteClick()"> Delete </button>
 
   </div>
 <hr>
-<button class="btn">Get a Shareable Link
-   <!-- <br>
-  <p>http://localhost:4200/article/5af36299d0c097f581bb05f5 </p>  -->
+<button class="btn btn-outline-success">Get a Shareable Link
+ 
+  <!-- <p>http://localhost:4200/article/5af36299d0c097f581bb05f5 </p>   -->
 </button>
-<button class="btn">Dowload</button>
+<br>
 
-<div class="fb-share-button" data-href="https://project2-j.herokuapp.com/final-trip/5ae3092002122d0020557c47" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+<button class="btn btn-outline-success">Dowload as PDF </button>
+
+<div class="fb-share-button" data-href="https://get--involved.herokuapp.com/article/5afd58ff536e7c00144c97fa" data-layout="button_count" data-size="large" data-mobile-iframe="true">
   <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
     class="fb-xfbml-parse-ignore">Share Your Trip</a>                
 </div>
