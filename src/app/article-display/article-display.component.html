@@ -1,5 +1,10 @@
 
 
+
+
+
+
+
  <!-- image background main-page -->
  <div class="row top-photo" >
 
@@ -80,8 +85,8 @@
       
       
       <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
-          <!-- [iconUrl]=" markerIconUrl()" -->
-        <agm-marker  [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]"> 
+       
+        <agm-marker [iconUrl]=" markerIconUrl()" [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]"> 
             <agm-info-window > {{oneArticle.title}}  <br>    <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
               <button class="btn btn-success"> Read More</button>
             </a>
@@ -128,23 +133,23 @@
             <p> Species in Danger <br> </p><div class="chfi">{{a}}</div>
           </div>
             <div [ngClass]="classState" class="see-more col chfi">
-                <p> Mammals </p>
+                <p> Mammals :  {{b}}</p>
               
               </div>
               <div [ngClass]="classState2" class="see-more col chfi">
-                <p> Reptiles </p>
+                <p> Reptiles :  {{c}} </p>
               
               </div>
               <div [ngClass]="classState3" class="see-more col chfi">
-                <p> Birds </p>
+                <p> Birds :  {{f}} </p>
               
               </div>
               <div [ngClass]="classState4" class="see-more col chfi">
-                <p> Insects </p>
+                <p> Insects :  {{e}} </p>
               
               </div>
               <div [ngClass]="classState5" class="see-more col chfi">
-                <p> Aquatic Animals </p>
+                <p> Aquatic Animals :  {{d}} </p>
               
               </div>
 </div>

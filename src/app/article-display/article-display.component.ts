@@ -36,8 +36,12 @@ import { Router, NavigationEnd } from '@angular/router';
   ]
 })
 export class ArticleDisplayComponent implements OnInit {
- a : number; 
- b : number; 
+ a : number = 0 
+ b : number = 0
+ c : number = 0
+ d : number = 0
+ e : number = 0
+ f : number = 0
   state: string = 'small';
   animateMe() {
     this.state = (this.state === 'small' ? 'large' : 'small');
@@ -69,9 +73,9 @@ export class ArticleDisplayComponent implements OnInit {
   // this.locationChosen = true
 }
 
-// markerIconUrl() {
-//   return require('../../assets/images/image.png')
-// }
+markerIconUrl() {
+  return require('../../assets/images/Icon1.png')
+}
 
 classState : any = {
 
@@ -146,9 +150,54 @@ classState5 : any = {
     .then((result : Article[])=>{
       this.articles = result; 
       this.a = this.articles.length;
-    //  this.b = result.
-  
-      console.log(result, "ok")
+      this.articles.forEach((oneArticle) => {
+        if (oneArticle.species == 'Mammals'){
+          this.b ++ 
+        }
+        else if(oneArticle.species == 'Reptiles'){
+          this.c ++
+        }
+        else if(oneArticle.species == 'Aquatic Animals'){
+          this.d ++
+        }
+        else if(oneArticle.species == 'Insects'){
+          this.e ++
+        }
+        else if(oneArticle.species == 'Birds'){
+          this.f ++
+        }
+      })
+    //   for(let i = 0 ; i < this.articles.length; i ++){
+    //   if (this.articles[1].species){
+    //     this.b ++ 
+    //     console.log(this.articles.species[0])
+
+    //     console.log(this.b)
+       
+    //   }
+    //   else if (this.articles.species){
+    //   this.c ++
+    //   console.log(this.articles[1].species)
+   
+    //   }
+    //   else if (this.articles[2].species){
+    //     this.d ++ 
+       
+    //   }
+    //   else if (this.articles[3].species){
+    //     this.f ++ 
+       
+    //   }
+    //   else if (this.articles[4].species){
+    //     this.e ++ 
+       
+    //   }
+    // }
+      // console.log (this)
+      // console.log (this.articles)
+      // console.log (this.articles[2])
+      // console.log (this.articles[2].species)
+      // console.log(result, "ok")
     })
     .catch((err)=>{
       console.log("Article list error")
