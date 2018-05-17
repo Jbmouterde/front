@@ -315,10 +315,10 @@ body > app-root > div > app-article-display > ul > li:nth-child(2){
 }
 
 .top-photo {
-  background-image: url("https://images.pexels.com/photos/257578/pexels-photo-257578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350");
+  background-image: url("https://images.pexels.com/photos/146244/pexels-photo-146244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   height: 100vh;
   background-size: cover;
-  width: 100%;
+  
   background-repeat: no-repeat
 }
 .col-12{
