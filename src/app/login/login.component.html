@@ -1,4 +1,43 @@
-<div class="container">
+<!-- stylish form -->
+
+
+<div class='bold-line'></div>
+<div class='container'>
+  <div class='window'>
+    <div class='overlay'></div>
+    <div class='content'>
+      <div class='welcome'>Hello Member !</div>
+      <div class='subtitle'>Log in to access your Account </div>
+      <div class='input-fields'>
+        <form (ngSubmit)="loginSubmit()">
+
+        
+         
+          <input type="text" [(ngModel)]="formCreds.username" 
+          name="username" placeholder="Wonderman" class="input-line full-width">
+        
+    
+
+        
+          <input type="password" [(ngModel)]="formCreds.password" 
+          name="password" placeholder="******" class="input-line full-width">
+       
+
+          <div><button class='btn btn-success'> Log in</button></div>
+        </form>
+      </div>
+      <!-- <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div> -->
+      <!-- <div><button class='ghost-round full-width'>Create Account</button></div> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- normal form -->
+
+<!-- <div class="container">
 
 <h2> Log in </h2>
 <hr>
@@ -28,4 +67,4 @@
 
 </div>
 </div>
-</div>
+</div> -->
