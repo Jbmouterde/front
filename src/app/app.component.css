@@ -26,4 +26,7 @@ h6 a {
   color : lightgray
 }
 
+nav li:hover {
+ /* opacity: 0.5; */
+}
 

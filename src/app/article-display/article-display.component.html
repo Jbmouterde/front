@@ -1,4 +1,5 @@
 
+
  <!-- image background main-page -->
  <div class="row top-photo" >
 
@@ -97,13 +98,19 @@
   <div class="col-4">
     <hr>
     <p> Search by Species </p>
-       <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')"> Mammals</button>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')"> Reptiles  </button>
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')"> Birds    </button>
+    
+       <button class="btn btn-outline-success" (click)="setSpeciesFilter('Mammals')" (click)="toggleDescriptionClass()"> 🐼 </button>
+ 
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Reptiles')" (click)="toggleDescriptionClass2()"> 🦎 </button>
+        
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Birds')" (click)="toggleDescriptionClass3()">  🕊   </button>
+          
            
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')"> Insects      </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Insects')" (click)="toggleDescriptionClass4()"> 🕷    </button>
+          
            
-             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')"> Aquatic Animals </button>
+             <button class="btn btn-outline-success" (click)="setSpeciesFilter('Aquatic Animals')" (click)="toggleDescriptionClass5()"> 🐳 </button>
+        
              <button class="btn btn-outline-success" (click)="setSpeciesFilter('Other')"> Other </button>
 <hr>
              <p> Search by level of Danger </p>
@@ -112,12 +119,37 @@
              <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
              <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>
              <hr> 
-             <div class="circle">
+             <div class="container">
+
+             <div class="row">
+             <div class="circle col">
                <br>
                <br>
             <p> Species in Danger <br> </p><div class="chfi">{{a}}</div>
+          </div>
+            <div [ngClass]="classState" class="see-more col chfi">
+                <p> Mammals </p>
+              
+              </div>
+              <div [ngClass]="classState2" class="see-more col chfi">
+                <p> Reptiles </p>
+              
+              </div>
+              <div [ngClass]="classState3" class="see-more col chfi">
+                <p> Birds </p>
+              
+              </div>
+              <div [ngClass]="classState4" class="see-more col chfi">
+                <p> Insects </p>
+              
+              </div>
+              <div [ngClass]="classState5" class="see-more col chfi">
+                <p> Aquatic Animals </p>
+              
+              </div>
 </div>
-   
+</div>
+<!--  -->
     </div>
         <!-- <div class="reports-container">
           

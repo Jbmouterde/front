@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import 'rxjs/operator/toPromise';
+import {environment} from '../../environments/environment'
 
 
 
@@ -16,7 +17,7 @@ export class UserService {
   // GET CHECKLOGIN
   check(){
     return this.ajaxTruc 
-    .get('http://localhost:3000/api/checklogin', {withCredentials : true})
+    .get(`${environment.backUrl}/api/checklogin`, {withCredentials : true})
     .toPromise()
     .then((apiResponse: any)=>{
       this.currentUser = apiResponse.userInfo;
@@ -27,7 +28,7 @@ export class UserService {
   // POST SIGNUP
   postSignup(creds : LoginCredentials){
     return this.ajaxTruc
-    .post('http://localhost:3000/api/signup', 
+    .post(`${environment.backUrl}/api/signup`, 
     creds,
     {withCredentials : true})
     .toPromise()
@@ -41,7 +42,7 @@ export class UserService {
   // POST /LOGIN
   postLogin(creds : LoginCredential){
     return this.ajaxTruc
-    .post('http://localhost:3000/api/login', 
+    .post(`${environment.backUrl}/api/login`, 
     creds,
     {withCredentials : true})
     .toPromise()
@@ -53,7 +54,7 @@ export class UserService {
   // GET /LOGOUT
   logout(){
     return this.ajaxTruc
-    .get('http://localhost:3000/api/logout', {withCredentials : true})
+    .get(`${environment.backUrl}/api/logout`, {withCredentials : true})
     .toPromise()
     .then((apiResponse: any)=>{
       this.currentUser = apiResponse.userInfo;
@@ -64,7 +65,7 @@ export class UserService {
 
 getUser(){
   return this.ajaxTruc
-  .get('http://localhost:3000/api/admin')
+  .get(`${environment.backUrl}/api/admin`)
   .toPromise();
 }
 }

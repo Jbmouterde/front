@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
 import { Router, NavigationEnd } from '@angular/router';
+// import {environment} from '../environments/environment'
+
+// declare var Stripe: any;
 
 @Component({
   selector: 'app-root',
@@ -36,6 +39,9 @@ export class AppComponent {
       console.log("App Login error")
       console.log(err)
     });
+
+    // var stripe = Stripe(environment.stripesKey); // use your test publishable key
+    // var elements = stripe.elements();
   }
   
   logoutClick(){

@@ -37,6 +37,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class ArticleDisplayComponent implements OnInit {
  a : number; 
+ b : number; 
   state: string = 'small';
   animateMe() {
     this.state = (this.state === 'small' ? 'large' : 'small');
@@ -74,9 +75,32 @@ export class ArticleDisplayComponent implements OnInit {
 
 classState : any = {
 
-  descriptionYolo: true
+  descriptionYolo: true,
+
 } 
 
+classState4 : any = {
+
+
+  descriptionYolo4 : true
+
+} 
+classState2 : any = {
+
+
+  descriptionYolo2 : true,
+
+} 
+classState3 : any = {
+
+
+  descriptionYolo3 : true,
+
+} 
+classState5 : any = {
+
+  descriptionYolo5 : true
+} 
   constructor(
     public apiTruc : ArticleService,
     private router: Router,
@@ -122,7 +146,7 @@ classState : any = {
     .then((result : Article[])=>{
       this.articles = result; 
       this.a = this.articles.length;
-   
+    //  this.b = result.
   
       console.log(result, "ok")
     })
@@ -152,6 +176,21 @@ classState : any = {
 toggleDescriptionClass(){
   this.classState.descriptionYolo = !this.classState.descriptionYolo;
 }
+toggleDescriptionClass2(){
+  this.classState2.descriptionYolo2 = !this.classState2.descriptionYolo2;
+}
+toggleDescriptionClass3(){
+  this.classState3.descriptionYolo3 = !this.classState3.descriptionYolo3;
+}
+toggleDescriptionClass4(){
+  this.classState4.descriptionYolo4 = !this.classState4.descriptionYolo4;
+}
+toggleDescriptionClass5(){
+  this.classState5.descriptionYolo5 = !this.classState5.descriptionYolo5;
+}
+
+
+
 
   // TEST BUTTON +1 
   increaseCount(oneArticle: Article){

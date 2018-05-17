@@ -2,10 +2,9 @@
   /* position: relative; */
 
   border: 2px solid #BD9016;
-  width: 150px;
-  height: 150px;
+  /* width: 150px;
+  height: 150px; */
   border-radius: 100px;
-
   transition: all 1s ease 500ms;
 }
 
@@ -73,7 +72,6 @@ padding-left: 30px;
 color: darkgreen;
 }
 
-
 .reports-container { 
   float: left;
   overflow: scroll;
@@ -84,7 +82,8 @@ color: darkgreen;
 
 #report-seach {
   border-radius: 6px;
-  color: wheat
+  color: wheat;
+  width: 500px;
   
 }
 
@@ -119,6 +118,8 @@ agm-map {
   float : left;
   margin-top: 100px;
   margin-bottom: 50px;
+  border : 1px solid green;
+  /* border-radius : 100px */
 
 }
 .rowi{
@@ -131,13 +132,17 @@ agm-map {
 } */
 
 .see-more {
-  background: wheat;
+float : left; 
+border: 2px solid #BD9016;
+/* width: 150px;
+height: 150px; */
+border-radius: 100px;
+/* float: left; */
+
+transition: all 1s ease 500ms;  
 }
 
-.see-more a {
-  padding-left: 50px;
-  
-}
+
 
 .headlines li {
   list-style-type: none;
@@ -239,9 +244,9 @@ figure {
   opacity: 1;
 }
 
-agm-info-window {
+/* agm-info-window {
   height : 200px
-}
+} */
 .col-3 {
   float: left;
   width: 25%;
@@ -266,6 +271,18 @@ body > app-root > div > app-article-display > ul > li:nth-child(2){
 
  
 .descriptionYolo {
+  display : none; 
+}
+.descriptionYolo2 {
+  display : none; 
+}
+.descriptionYolo3 {
+  display : none; 
+}
+.descriptionYolo4 {
+  display : none; 
+}
+.descriptionYolo5 {
   display : none; 
 }
 
