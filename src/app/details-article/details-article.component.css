@@ -19,16 +19,17 @@ float : left ;
 }
 .test {
   float : left ;
-  height : 500px;
+  height : 550px;
   overflow: scroll;
 
 
 }
-button {
+/* button {
   background: salmon;
   color: wheat;
 
-} 
+}  */
+
 
 .StripeElement {
   background-color: white;
