@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient} from '@angular/common/http'
 import 'rxjs/operator/toPromise';
+import {environment} from '../../environments/environment'
+
 
 @Injectable()
 export class ArticleService {
@@ -16,18 +18,18 @@ export class ArticleService {
 
 getList(){
   return this.ajaxTruc
-  .get('http://localhost:3000/api/articles')
+  .get(`${environment.backUrl}/api/articles`)
   .toPromise();
 }
 getDetails(articleId){
   return this.ajaxTruc
-  .get(`http://localhost:3000/api/articles/${articleId}`)
+  .get(`${environment.backUrl}/api/articles/${articleId}`)
   .toPromise();
 }
 // FORM ADD ARTICLE 
 addArticle(creds : Creds){
   return this.ajaxTruc
-  .post('http://localhost:3000/api/articles', creds)
+  .post(`${environment.backUrl}/api/articles`, creds)
   .toPromise()
   .then((apiResponse: any)=>{
     return apiResponse;
@@ -37,14 +39,14 @@ addArticle(creds : Creds){
 //DELETE ARTICLE 
 delete(articleId){
   return this.ajaxTruc
-  .delete(`http://localhost:3000/api/articles/${articleId}`)
+  .delete(`${environment.backUrl}/api/articles/${articleId}`)
   .toPromise()
 }
 // UPDATE likes 
 
 updateLike(articleId){
   return this.ajaxTruc
-  .put(`http://localhost:3000/api/articles/${articleId}/like`, {}, {withCredentials: true})
+  .put(`${environment.backUrl}/api/articles/${articleId}/like`, {}, {withCredentials: true})
   .toPromise();
 }
 //
