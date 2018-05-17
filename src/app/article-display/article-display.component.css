@@ -34,9 +34,10 @@ img {
 }
 .button1{
   float: left;
-  position: relative;
+  text-align : center;
+  /* position: relative; */
     background-color: darkgrey;
-    border: none;
+    border-radius : 50%;
     font-size: 28px;
     color: #FFFFFF;
     text-align: center;
