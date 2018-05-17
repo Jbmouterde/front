@@ -5,5 +5,8 @@
 
 export const environment = {
   production: false,
-  backUrl : 'http://localhost:3000'
+  backUrl : 'http://localhost:3000', 
+  mapsKey : "AIzaSyAbsDqOb54l-4NXptl4QZz17OieIkHGq6I", 
+  googleAnalitics : 'UA-119006261-1', 
+  stripesKey : 'pk_test_NLInK4w6r3f4X88AjNLlig4k'
 };

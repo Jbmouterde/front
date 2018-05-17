@@ -87,6 +87,7 @@ export class Creds {
   organization : string; 
   species : string; 
   type : string ; 
+  location : string;
   coordinates: number[];
   danger : string; 
   descriptif : string; 
