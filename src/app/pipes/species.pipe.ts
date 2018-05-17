@@ -18,6 +18,7 @@ export class SpeciesPipe implements PipeTransform {
       return articles;
     }
 
+    
 
     return articles.filter(function(article) {
       console.log(article.species === speciesTerm)
