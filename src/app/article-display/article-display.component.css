@@ -243,11 +243,12 @@ figure {
 .titre{
   font-size : 100px;
   color : #28a745; 
-  text-shadow: 10px 10px 10px whitesmoke;
+  text-shadow: 10px 5px 20px whitesmoke;
 }
 .para{
   /* text-shadow: 1px 1px 1px #28a745; */
-  color :  grey; 
+  color :  white;
+  font-size: 1.2em; 
   margin-top : 20px
 
 }
@@ -386,7 +387,7 @@ body {
         width: 50%;
         padding-top: 12px;
         padding-bottom: 12px;
-        margin-left: 200px;
+        margin-left: 330px;
 
          
 
