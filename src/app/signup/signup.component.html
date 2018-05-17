@@ -1,4 +1,51 @@
-<div class="container">
+<!-- stylish form -->
+
+
+
+
+<div class='bold-line'></div>
+<div class='container'>
+  <div class='window'>
+    <div class='overlay'></div>
+    <div class='content'>
+      <div class='welcome'>Hello There!</div>
+      <div class='subtitle'>We're almost done. Before using our services you need to create an account.</div>
+      <div class='input-fields'>
+        <form (ngSubmit)="signupSubmit()">
+
+        
+         
+          <input type="text" [(ngModel)]="formCreds.username" 
+          name="username" placeholder="wonderman" class="input-line full-width">
+        
+          
+        
+          <input type="email" [(ngModel)]="formCreds.email" 
+          name="email" placeholder="nizar@pizza.com" class="input-line full-width">
+
+        
+          <input type="password" [(ngModel)]="formCreds.password" 
+          name="password" placeholder="******" class="input-line full-width">
+       
+
+          <div><button class='btn btn-success'> Sign Up </button></div>
+        </form>
+      </div>
+      <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>
+      <!-- <div><button class='ghost-round full-width'>Create Account</button></div> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- normal form -->
+<!-- <div class="container">
 <h2> Signup </h2>
 <hr>
 <div class="row">
@@ -38,4 +85,4 @@
 </div>
 </div>
 </div>
-</div>
+</div> -->

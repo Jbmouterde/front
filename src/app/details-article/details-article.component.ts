@@ -14,17 +14,17 @@ import { NgForm } from '@angular/forms';
   templateUrl: './details-article.component.html',
   styleUrls: ['./details-article.component.css']
 })
-export class DetailsArticleComponent implements OnInit , AfterViewInit, OnDestroy{
+export class DetailsArticleComponent implements OnInit {
   articleId : string;
   article : Article;
  
 // 
-@ViewChild('cardInfo') cardInfo: ElementRef;
+// @ViewChild('cardInfo') cardInfo: ElementRef;
 
-  card: any;
-  cardHandler = this.onChange.bind(this);
-  error: string;
-  // 
+//   card: any;
+//   cardHandler = this.onChange.bind(this);
+//   error: string;
+//   // 
 
   constructor(
     private reqTruc : ActivatedRoute,
@@ -83,37 +83,37 @@ export class DetailsArticleComponent implements OnInit , AfterViewInit, OnDestro
           })
         }
  
-        ngAfterViewInit() {
-          this.card = elements.create('card');
-          this.card.mount(this.cardInfo.nativeElement);
+        // ngAfterViewInit() {
+        //   this.card = elements.create('card');
+        //   this.card.mount(this.cardInfo.nativeElement);
       
-          this.card.addEventListener('change', this.cardHandler);
+        //   this.card.addEventListener('change', this.cardHandler);
+        // }
+      
+        // ngOnDestroy() {
+        //   this.card.removeEventListener('change', this.cardHandler);
+        //   this.card.destroy();
+        // }
+      
+        // onChange({ error }) {
+        //   if (error) {
+        //     this.error = error.message;
+        //   } else {
+        //     this.error = null;
+        //   }
+        //   this.cd.detectChanges();
+        // }
+      
+        // async onSubmit(form: NgForm) {
+        //   const { token, error } = await stripe.createToken(this.card);
+      
+        //   if (error) {
+        //     console.log('Something is wrong:', error);
+        //   } else {
+        //     console.log('Success!', token);
+        //     // ...send the token to the your backend to process the charge
+        //   }
         }
       
-        ngOnDestroy() {
-          this.card.removeEventListener('change', this.cardHandler);
-          this.card.destroy();
-        }
-      
-        onChange({ error }) {
-          if (error) {
-            this.error = error.message;
-          } else {
-            this.error = null;
-          }
-          this.cd.detectChanges();
-        }
-      
-        async onSubmit(form: NgForm) {
-          const { token, error } = await stripe.createToken(this.card);
-      
-          if (error) {
-            console.log('Something is wrong:', error);
-          } else {
-            console.log('Success!', token);
-            // ...send the token to the your backend to process the charge
-          }
-        }
-      }
       
 
