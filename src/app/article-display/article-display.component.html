@@ -44,7 +44,8 @@
 <div class="container-fluid" id="grid-article">
     <div class="rowi row">
       <!-- <div class="card-deck"> -->
-    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
+    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter) let i=index " >
+      <div  *ngIf="i<6">
   <!-- <div *ngIf="articles.length = 3"> -->
     <div class="ca">
         <h4>{{oneArticle.title}}</h4>
@@ -67,6 +68,7 @@
           <p class="likes">#{{oneArticle.likes.length}} </p>
 
         </div>
+      </div>
       </div>   
     </div>
   <!-- </div> -->
