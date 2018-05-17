@@ -243,6 +243,7 @@ color : white;
 height : 70px;
 width: 200px;
 font-size : 20px;
+transition: width, height, 0.3, ease-in-out;
 }
 .bouton:hover{
   background-color : #28a745;
