@@ -28,10 +28,14 @@
 <div class="row">
   <div class="col-12">
 
-    <label>
+      <div class="search__container">
+          <input [(ngModel)]= "userInput" class="search__input" type="text" placeholder="Search By Title">
+      </div>
+    <!-- normal search bar -->
+    <!-- <label>
         Filter reports by title
         <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
-      </label>
+      </label> -->
       <br>
       <br>
 
@@ -59,7 +63,7 @@
         <p>{{oneArticle.description}}</p>
       </div>
       <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
-          <button class="btn btn-success"> Read More</button>
+          <button class="btn btn-success">Read More</button>
         </a>
 
         
@@ -234,3 +238,4 @@
         </li>
         
     </ul> -->
+    
