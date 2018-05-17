@@ -34,8 +34,7 @@ img {
 }
 .button1{
   float: left;
-  text-align : center;
-  /* position: relative; */
+  position: relative;
     background-color: darkgrey;
     border-radius : 50%;
     font-size: 28px;
