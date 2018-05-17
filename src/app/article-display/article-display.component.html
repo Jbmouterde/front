@@ -1,5 +1,6 @@
 
  <!-- image background main-page -->
+
  <div class="row top-photo" >
 
     <div class="col-12 text">
@@ -35,7 +36,6 @@
 
   </div>
 </div>
-
 
 
 
@@ -91,7 +91,7 @@
       
       <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
        
-        <agm-marker [iconUrl]=" markerIconUrl()" [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]"> 
+        <agm-marker [iconUrl]="'../../assets/images/map.png'" [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]"> 
             <agm-info-window > {{oneArticle.title}}  <br>    <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
               <button class="btn btn-success"> Read More</button>
             </a>
@@ -189,6 +189,10 @@
     <div class="col">
       <br>
       <br>
+      <br>
+      <br>
+      <br>
+
     </div>
   </div>
 </div>

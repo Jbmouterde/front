@@ -74,9 +74,9 @@ export class ArticleDisplayComponent implements OnInit {
   // this.locationChosen = true
 }
 
-markerIconUrl() {
-  return require('../../assets/images/map.png')
-}
+// markerIconUrl() {
+//   return require('../../assets/images/map.png')
+// }
 
 classState : any = {
 

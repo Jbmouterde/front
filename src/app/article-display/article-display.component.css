@@ -196,10 +196,18 @@ transition: all 1s ease 500ms;
 }
 .parallax {
   background-attachment: inherit !important;
+  background-image: url("https://onekindplanet.org/wp-content/uploads/2016/09/animal-rhino-wpcf_520x294.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.parallax {
-  background-attachment: inherit !important;
-}
+
 .parallax {
   background-attachment: inherit !important;
   background-repeat: repeat;
