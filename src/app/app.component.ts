@@ -46,6 +46,7 @@ export class AppComponent {
   
   logoutClick(){
     this.userTruc.logout()
+    this.router.navigateByUrl('/')
     .catch((err)=>{
       console.log("App Logout Error");
       console.log(err)

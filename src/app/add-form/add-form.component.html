@@ -1,4 +1,205 @@
-<div class="container o"><h2> ADD A REPORT </h2></div>
+<!-- stylish form -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Daily UI | #001 - Sign Up</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body class="align">
+
+<div class="row">
+<div class="col-6">
+ <div class="container">
+  
+  <div class="grid align__item">
+
+    <div class="register">
+
+      <svg xmlns="http://www.w3.org/2000/svg" class="site__logo" width="56" height="84" viewBox="77.7 214.9 274.7 412"><defs><linearGradient id="a" x1="0%" y1="0%" y2="0%"><stop offset="0%" stop-color="#8ceabb"/><stop offset="100%" stop-color="#378f7b"/></linearGradient></defs><path fill="url(#a)" d="M215 214.9c-83.6 123.5-137.3 200.8-137.3 275.9 0 75.2 61.4 136.1 137.3 136.1s137.3-60.9 137.3-136.1c0-75.1-53.7-152.4-137.3-275.9z"/></svg>
+
+      <h2>Add Your Report</h2>
+
+          <form (ngSubmit)="articleSubmit()"> 
+              <div class="form-group">
+                
+                  Report Title
+                  <input type="text"[(ngModel)]="formCreds.title"  name="title" class="form-control"required placeholder="Title of your reports...">
+               
+              </div>
+              <br>
+
+
+              <div class="form-group">
+                  <label>
+                    Type of Reports : 
+                    <select [(ngModel)]="formCreds.type" name="type"for="type">
+                        <option value="">Type of Report</option>  
+                        
+                          <option name="Personal Information" value="Personal Information">Personal Information</option>
+                          <option name="Interview" value="Interview">Interview</option>
+                          <option name="Project" value="Project">Project</option>
+                          <option name="Story" value="Story">Story</option>
+                          <option name="Publication" value="Publication">Publication</option>
+                      </select>
+                    </label>
+                  </div>
+
+
+                  <div class="form-group">
+                      
+                        Date : 
+                        <input type="date" [(ngModel)]="formCreds.date" name="date" class="form-control">
+                      
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        
+                          Summary : 
+                          <input type="text" [(ngModel)]="formCreds.description" name="description"  placeholder="Just a small description of your topic.">
+                       
+                      </div>
+                      <br>
+                
+                      <div class="form-group">
+                          
+                            Description : 
+                           
+                            <textarea [(ngModel)]="formCreds.descriptif" name="descriptif"  cols="30" rows="10" placeholder="About the article"></textarea>
+                         
+                        </div>
+                         <br>
+
+                        <div class="form-group">
+                           
+                              Your Name
+                              <input type="text" [(ngModel)]="formCreds.nameWritter"  name="nameWritter" class="form-control" placeholder="Nizar Pizza">
+                           
+                          </div>
+                  
+                          <div class="form-group">
+                              
+                                Email
+                                <input type="email" [(ngModel)]="formCreds.email" name="email" class="form-control" placeholder="nizar@pizza.com">
+                             
+                            </div>
+                             <br>
+                  
+                          <div class="form-group">
+                              
+                                Location : 
+                                <input type="text" [(ngModel)]="formCreds.location" name="location" class="form-control" class="location-input"autocorrect="off" autocapitalize="off" spellcheck="off" placeholder="enter a location..." #search [formControl]="searchControl">
+                                <input type="hidden" name="latitude" class="lat-input" />
+                                <input type="hidden" name="longitude" class="lng-input" />
+                              
+                            </div>
+                            <br>
+
+                            <div class="form-group">
+                                
+                                  Image : 
+                                  <input type="imageUrl" [(ngModel)]="formCreds.imageUrl" name="imageUrl" class="form-control" placeholder="Insert an image">
+                                
+                            </div>
+
+
+
+                            <div class="form-group">
+                               
+                                  Organization : 
+                                    <select [(ngModel)]="formCreds.organization" name="organization" for="organization">
+                                      <option value="">Organization</option>  
+                                      
+                                        <option name="World Wildlife Fund" value="World Wildlife Fund">World Wildlife Fund</option>
+                                        <option name="Centra Terra Viva" value="Centra Terra Viva">Centra Terra Viva</option>
+                                        <option name="Giz" value="Giz">Giz</option>
+                                        <option name="World Ressource institute" value="World Ressource institute">World Ressource institute</option>
+                                        <option name="Other" value="Other">Other</option>
+                                    </select>
+                                 
+                              </div>
+                    
+                              <div class="form-group">
+                                
+                                  Type of Species in Danger
+                                  <select [(ngModel)]="formCreds.species" name="species" for="species">
+                                      <option value="">Animals Species</option>  
+                                        <option  name="Mammals" value="Mammals">Mammals</option>
+                                        <option  name="Reptiles" value="Reptiles">Reptiles</option>
+                                        <option  name="Birds" value="Birds">Birds</option>
+                                        <option  name="Insects" value="Insects">Insects</option>
+                                        <option  name="Aquatic Animals" value="Aquatic Animals">Aquatic Animals</option>
+                                        <option  name="Other" value="Other">Other</option>
+                    
+                                    </select>
+                                 
+                                </div>
+
+
+
+                                <div class="form-group">
+                                        
+                                      Level of Danger :         
+                                        <select [(ngModel)]="formCreds.danger" name="danger" for="danger">
+                                          <option value="">Danger</option>  
+                                          
+                                            <option  name="In Danger" value="In Danger">In Danger</option>
+                                            <option  name="Real Danger" value="Real Danger">Real Danger</option>
+                                            <option  name="Almost Extinct" value="Almost Extinct">Almost Extinct</option>
+                                        </select>
+                                     
+                      
+                                  </div>
+
+                                    <button type="submit" class="btn btn-success">Submit</button>
+
+                       </form>
+
+                                    
+        <!-- <div class="form__field">
+          <input type="password" placeholder="••••••••••••">
+        </div>
+
+        <div class="form__field">
+          <input type="submit" value="Sign Up">
+        </div> -->
+
+      <!-- </form> -->
+    </div>
+    </div>
+    </div>
+    </div>
+    
+  
+    <div class="col-6">
+        <h3 class="espace"> Check Out the Location Instantly !</h3>
+        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+          <agm-marker 
+          
+          [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
+         
+        </agm-map>
+     </div>
+    
+  </div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+<!-- <div class="container o"><h2> ADD A REPORT </h2></div>
 <hr>
   <div class="row">
       <div class="col-6">
@@ -140,18 +341,10 @@
   </form>
 </div>
 </div>
-</div>
+</div> -->
 
-<div class="col-6">
-<h3 class="espace"> Check Out the Location Instantly !</h3>
-<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
-  <agm-marker 
-  
-  [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">  </agm-marker>
- 
-</agm-map>
-</div>
-</div>
+
+
 
 
 
