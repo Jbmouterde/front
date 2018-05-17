@@ -10,13 +10,44 @@ import { Article, ArticleService } from '../services/article.service';
 export class RouteoneComponent implements OnInit {
   // OTHER PIE
   article = Article;
+  articles : Article[] = [];
 
-  public doughnutChartLabels:string[] = ['Personal Information', 'Interview', 'Story', 'Projects', 'Publication'];
-  public doughnutChartData:number[] = [50, 30, 15, 5, 0];
+a : number = 0
+b : number = 10
+c : number = 34
+d : number = 4
+e : number = 10
+jack : number = 0
+
+public dataDonut(){
+  const that = this
+  this.articles.forEach((oneArticle) => {
+    if (oneArticle.species == 'Mammals'){
+      that.b ++ 
+    }
+    else if(oneArticle.species == 'Reptiles'){
+      that.c ++
+    }
+    else if(oneArticle.species == 'Aquatic Animals'){
+        const jack = that.d ++
+    }
+    else if(oneArticle.species == 'Insects'){
+      that.e ++
+    }
+    else if(oneArticle.species == 'Birds'){
+      that.a ++
+      console.log(that.a)
+    }
+  })
+}
+
+
+
+  public doughnutChartLabels:string[] = ['Insects', 'Mammals', 'Aquatic Animals', 'Birds', 'Reptiles'];
+  public doughnutChartData:number[] = [this.jack, this.b, this.d,this.c, this.e];
   public doughnutChartType:string = 'doughnut';
-  public dataDonut(){
-    return 31 ; 
-  }
+
+
 
   // events
   public chartClicked(e:any):void {
@@ -52,6 +83,12 @@ export class RouteoneComponent implements OnInit {
   }
   
   ngOnInit() {
-  }
 
-}
+
+
+    }
+
+
+
+
+  }
