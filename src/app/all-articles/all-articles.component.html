@@ -1,4 +1,4 @@
-
+<!-- 
   <div class="container">
 
       <div class="container vri">
@@ -28,19 +28,70 @@
 <button class="btn">Get a Shareable Link
    <!-- <br>
   <p>http://localhost:4200/article/5af36299d0c097f581bb05f5 </p>  -->
-</button>
-<div class="fb-share-button" data-href="#" data-layout="button_count" data-size="large" data-mobile-iframe="true">
-  <button class="btn">
-  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-    class="fb-xfbml-parse-ignore">Share Your article</a> </button>
+<!-- </button>
 
-
-</div>
             </div>
           </div>
         </li>
     </ul>
 
 </div>
-</div>
+</div>  -->
 
+<div class="row">
+    <div class="col-12">
+  
+        <div class="search__container">
+            <input [(ngModel)]= "userInput" class="search__input" type="text" placeholder="Search By Title amoung {{a}} reports..">
+        </div>
+      <!-- normal search bar -->
+      <!-- <label>
+          Filter reports by title
+          <input [(ngModel)]= "userInput" type ="search" placeholder="Blah Blah" id="report-seach"> 
+        </label> -->
+        <br>
+        <br>
+  
+    </div>
+  </div>
+  
+
+<div class="container-fluid" id="grid-article">
+    <div class="rowi row">
+      <!-- <div class="card-deck"> -->
+    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter) let i=index " >
+      <!-- <div  *ngIf="i<6"> -->
+  <!-- <div *ngIf="articles.length = 3"> -->
+    <div class="ca">
+        <h4>{{oneArticle.title}}</h4>
+       
+        <p>{{oneArticle.organization}}</p>
+        
+        
+        <!-- <b> {{myCount}}</b> -->
+        <img [src]="oneArticle.imageUrl">
+        <p>{{oneArticle.description}}</p>
+      </div>
+      <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
+          <button class="btn btn-success">Read More</button>
+          <div class="fb-share-button" data-href="#" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+            <button class="btn">
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+              class="fb-xfbml-parse-ignore">Share Your article</a> </button> 
+          
+        
+          </div>
+        </a>
+
+        
+        <div>
+
+          <button (click)="increaseCount(oneArticle)" (click)= 'sendEvent()' class="rock button1" ><i class="fa fa-star"></i></button>
+          <p class="likes">#{{oneArticle.likes.length}} </p>
+
+        </div>
+
+      </div>   
+    </div>
+  <!-- </div> -->
+  </div>
