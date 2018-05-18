@@ -1,3 +1,4 @@
+
 agm-map {
   
   height: 900px;
@@ -122,6 +123,7 @@ a {
   box-shadow: 0 0 250px white;
   text-align: center;
   padding: 4rem 2rem;
+  cursor : pointer
 }
 .register input{
  

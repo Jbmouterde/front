@@ -9,6 +9,11 @@ import { ArticleService, Article } from '../services/article.service';
 })
 export class AllArticlesComponent implements OnInit {
   articles : Article[] = [];
+  a : number = 0 
+  userInput: string;
+  speciesFilter : string; 
+  dangerFilter : string;
+  typeFilter: string;
 
 
   constructor(
@@ -29,4 +34,16 @@ export class AllArticlesComponent implements OnInit {
   }
 
 
+  setTypeFilter(filterName) {
+    this.typeFilter = filterName
+  }
+  setSpeciesFilter(filterName) {
+    this.speciesFilter = filterName
+  }
+  
+  setDangerFilter(filterName) {
+    this.dangerFilter = filterName
+  }
+
 }
+

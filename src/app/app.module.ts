@@ -5,6 +5,7 @@ import{ HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {environment} from '../environments/environment'
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { AppComponent } from './app.component';
 
@@ -64,6 +65,8 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    ScrollToModule.forRoot()
+,
     BrowserAnimationsModule,
     ChartsModule,
     AgmCoreModule.forRoot({
