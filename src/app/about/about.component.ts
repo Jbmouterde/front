@@ -5,6 +5,7 @@ import { Component, OnInit, AfterViewInit,
   ChangeDetectorRef } from '@angular/core';
 
   import { NgForm } from '@angular/forms';
+  import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @Component({
   selector: 'app-about',
