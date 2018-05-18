@@ -4,12 +4,35 @@
 
     <div class="container vri">
 <div class="reports-container">
-  <button class="btn"><a routerLink="/"> Back </a> </button>
+  <!-- <button class="btn "><a routerLink="/"> Back </a> </button> -->
 
-
+<div class="container">
+<div class="row">
+    <div class="col">
+        <ul> 
+            <h3> All Users</h3>
+            <li *ngFor="let oneUser of users">
+            <div>
+                
+                <div class="card-body">
+                  <h3> {{oneUser.username}} </h3>
+                  <p class="card-text"> ID User :{{oneUser._id}} </p>
+                  
+           
+                      <button class="btn btn-danger" (click)="deleteClick()"> Delete </button>
+                    
+        <hr>
+        
+        
+                </div>
+              </div>
+            </li>
+        </ul>
+        </div>
+<div class="col">
 
   <ul> 
-      <h2> All articles</h2>
+      <h3> All articles</h3>
       <li *ngFor="let oneArticle of articles">
       <div>
           
@@ -17,9 +40,9 @@
             <h3> {{oneArticle.title}} </h3>
             <p class="card-text"> written by {{oneArticle.nameWritter}} for  <strong>{{oneArticle.organization}} </strong></p>
             
-              <a id ="details-link"[routerLink]="['/article', oneArticle._id]"> Detail</a>
+              <a   class="btn btn-outline-success" id ="details-link"[routerLink]="['/article', oneArticle._id]"> Detail</a>
      
-                <button (click)="deleteClick()"> Add </button>
+                <button class="btn btn-success"(click)="deleteClick()"> Add </button>
               
 <hr>
 
@@ -28,28 +51,10 @@
         </div>
       </li>
   </ul>
+</div>
+</div>
+</div>
 
 </div>
 </div>
-
-<ul> 
-    <h2> All Users</h2>
-    <li *ngFor="let oneUser of users">
-    <div>
-        
-        <div class="card-body">
-          <h3> {{oneUser.username}} </h3>
-          <p class="card-text"> ID User :{{oneUser._id}} </p>
-          
-   
-              <button (click)="deleteClick()"> Delete </button>
-            
-<hr>
-
-
-        </div>
-      </div>
-    </li>
-</ul>
-
 </div>

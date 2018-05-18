@@ -39,13 +39,13 @@
             <li class="nav-item active">
                 <a class="nav-link" routerLink="/about">About <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                
-            </li>
+          
+        
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Articles
                 </a>
+                
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <span *ngIf="userTruc.currentUser">
                         <b> {{userTruc.currentUser.username}}</b>
@@ -77,10 +77,7 @@
                                 <b> {{userTruc.currentUser.username}}</b>
 
                             </span>
-                            <!-- <span *ngIf="userTruc.currentUser.role == 'admin'">
-                                    <a class="dropdown-item" routerLink="/admin">Admin  Page</a>
-</span> -->
-                                <!-- </span> -->
+                          <!-- </span> -->
                                 
                                 <!-- </span> -->
                                 <!-- <span *ngIf="!userTruc.currentUser"> -->
@@ -89,13 +86,14 @@
                                         <a class="dropdown-item" routerLink="/login">Log In</a>
                                         <a class="dropdown-item" routerLink="/signup">Sign Up</a>
                                     </span>
-                                    <a class="dropdown-item" routerLink="/routeone">Stats</a>
         
                                     <span *ngIf="userTruc.currentUser">
-                    
+                                            <a class="dropdown-item" routerLink="/routeone">Stats</a>
+
                                             <button class="btn btn-outline-success" (click)="logoutClick()" id="logout"> Log Out </button>
                                         </span>
-                                    
+                                        
+                             
                               
                                     
                                     <!-- <a class="dropdown-item" href="/setting/{{blahUser.Id}}">Mes informations personnelles</a> -->
@@ -103,7 +101,8 @@
                                 </div>
                                 
                             </li>
-        
+       
+          
              </ul>
              
                             <a routerLink="/about">
@@ -158,6 +157,16 @@
                           </button>            
                           </h6>
           </div>
+           <!-- <div class="col-md-2 mb-3">
+              <div *ngIf="userTruc.currentUser.role == 'admin'">
+    <button class="btn" > <a routerLink="/admin">Admin</a> </button>
+</div>
+  </div> -->
+
+          <!-- <h6 class="text-uppercase" *ngIf="userTruc.currentUser.role === 'admin'">
+                <button routerLink="/admin">Admin </button>
+            </h6>
+        </div>  -->
           <!--Grid column-->
 
       </div>

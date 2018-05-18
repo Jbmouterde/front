@@ -35,6 +35,12 @@ export class LoginComponent implements OnInit {
   loginSubmit(){
     this.userTruc.postLogin(this.formCreds)
     .then((result)=>{
+      if(this.userTruc.currentUser.role =="admin"){
+        this.resTruc.navigateByUrl('/admin')
+        return
+      }
+      
+      else
       this.resTruc.navigateByUrl('/')
     })
     .catch((err)=>{

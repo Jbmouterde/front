@@ -1,0 +1,13 @@
+ ul {
+  text-decoration-style: none;
+  list-style-type: none;
+}
+col{
+  float :left ; 
+}
+.card-body{
+background-color: rgba(0, 0, 0, 0.1)
+}
+h3{
+  text-align: center
+}

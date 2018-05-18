@@ -31,6 +31,9 @@ h6 a {
   color : lightgray
 }
 
+nav {
+  cursor: pointer;
+}
 /* nav li:hover {
  opacity: 0.5;
 } */
