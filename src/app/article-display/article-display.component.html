@@ -1,12 +1,15 @@
 
  <!-- image background main-page -->
+
  <div class="row top-photo" >
 
     <div class="col-12 text">
        <p class="titre">GetInvolved</p>
-       <p class="para"> How many species are in danger ? How is it possible to help this cause ?  <br>
+       <p class="para"> How many species are in danger ? <br>
 
-        See our collection of data, submit your own observations, donate money to us  <br> and explore 
+        See our collection of data, submit your own observations, <br>
+        interact & share Reports from all around the world, 
+        donate money to Charity Organization  <br> and explore 
         
         adaptation solutions. <br>
         
@@ -18,12 +21,13 @@
         <button class="btn bouton"> ADD A REPORT </button></a>
     </div>
 </div>
+
 <!-- Search bar-->
 <div class="row">
   <div class="col-12">
 
       <div class="search__container">
-          <input [(ngModel)]= "userInput" class="search__input" type="text" placeholder="Search By Title amoung {{a}} reports..">
+          <input [(ngModel)]= "userInput" class="search__input" type="text" placeholder="Search By Titles..">
       </div>
     <!-- normal search bar -->
     <!-- <label>
@@ -38,13 +42,14 @@
 
 
 
-
 <!-- artciles  grid  -->
 
 <div class="container-fluid" id="grid-article">
     <div class="rowi row">
       <!-- <div class="card-deck"> -->
-    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
+    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter ) let i=index " >
+      <div  *ngIf="i<6">
+        <!-- <div *ngIf="oneArticle.likes.length > 0"> -->
   <!-- <div *ngIf="articles.length = 3"> -->
     <div class="ca">
         <h4>{{oneArticle.title}}</h4>
@@ -67,7 +72,9 @@
           <p class="likes">#{{oneArticle.likes.length}} </p>
 
         </div>
-      </div>   
+      </div>
+    </div>
+      <!-- </div>    -->
     </div>
   <!-- </div> -->
   </div>
@@ -91,7 +98,7 @@
       
       <div *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter)">
        
-        <agm-marker [iconUrl]=" markerIconUrl()" [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]"> 
+        <agm-marker [iconUrl]="'../../assets/images/map.png'" [latitude]="oneArticle.location.coordinates[0]" [longitude]="oneArticle.location.coordinates[1]"> 
             <agm-info-window > {{oneArticle.title}}  <br>    <a id ="details-link"[routerLink]="['/article', oneArticle._id]">
               <button class="btn btn-success"> Read More</button>
             </a>
@@ -189,6 +196,10 @@
     <div class="col">
       <br>
       <br>
+      <br>
+      <br>
+      <br>
+
     </div>
   </div>
 </div>

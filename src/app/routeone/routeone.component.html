@@ -1,9 +1,9 @@
-<p>
- Stats
-</p>
-<button (click)= 'sendEvent()'>Click Me</button>
+ <div class="container" style="text-align: center">
 
-<a routerLink="/">Home</a>
+
+ <h2>
+ Stats
+</h2>
 
 <div style="display: block">
   <canvas baseChart
@@ -14,5 +14,30 @@
               (chartClick)="chartClicked($event)">
               </canvas>
 </div>
+<div class="row">
+<div class="col">
 
+<div style="display: block">
+  <canvas baseChart
+              [data]="doughnutChartDat"
+              [labels]="doughnutChartLabel"
+              [chartType]="doughnutChartTyp"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+              </canvas>
+</div>
+</div>
+<div class="col">
 
+    <div style="display: block">
+      <canvas baseChart
+                  [data]="doughnutChartDa"
+                  [labels]="doughnutChartLabe"
+                  [chartType]="doughnutChartTy"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)">
+                  </canvas>
+    </div>
+    </div>
+</div>
+</div>
