@@ -89,7 +89,7 @@
 <div class="row main-row">
   <!-- map display -->
   <div class="col-8">
-      <h3> Track the Species !  </h3>
+      <h3> Track your Species !  </h3>
 
     <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="onChooseLocation($event)">
       <!-- <agm-marker [iconUrl]=" markerIconUrl()" [latitude]="latitude" [longitude]="longitude">  </agm-marker> -->
@@ -116,7 +116,7 @@
   
 
     <div class="col-4">
-      <p id="filter-p"> Filter Species </p>
+      <p id="filter-p"> Filter your Search </p>
       <hr>
       
       <br>
@@ -125,7 +125,7 @@
           <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
           <label class="menu-open-button" for="menu-open">
          
-            <span id="filter"> </span>
+            <span id="filter" class="lines line-1"> By Species </span>
            
          </label>
        
