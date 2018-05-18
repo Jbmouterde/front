@@ -115,7 +115,7 @@ button a {
 }
 
 agm-map {
-  /* padding-left: 30px; */
+  margin-left: 10px;
   height: 450px;
   width: 100%;
   /* margin : 20px 0px; */
@@ -123,8 +123,8 @@ agm-map {
   margin-top: 100px;
   margin-bottom: 50px;
   border : 1px solid green;
-  /* border-radius : 100px */
-
+  box-shadow:5px 10px #28a745 ;
+  
 }
 .rowi{
   height : 500px; 

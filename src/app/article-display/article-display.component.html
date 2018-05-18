@@ -7,7 +7,7 @@
        <p class="titre">GetInvolved</p>
        <p class="para"> How many species are in danger ? How is it possible to help this cause ?  <br>
 
-        See our collection of data, submit your own observations, donate money to us  <br> and explore 
+        See our collection of data, submit your own observations, donate money to Charity Organization  <br> and explore 
         
         adaptation solutions. <br>
         
@@ -44,9 +44,9 @@
 <div class="container-fluid" id="grid-article">
     <div class="rowi row">
       <!-- <div class="card-deck"> -->
-    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter | species : speciesFilter | danger : dangerFilter) let i=index " >
+    <div class="card" *ngFor="let oneArticle of (articles |  reports: userInput | type : typeFilter ) let i=index " >
       <div  *ngIf="i<6">
-        <div *ngIf="oneArticle.likes.length > 0">
+        <!-- <div *ngIf="oneArticle.likes.length > 0"> -->
   <!-- <div *ngIf="articles.length = 3"> -->
     <div class="ca">
         <h4>{{oneArticle.title}}</h4>
@@ -71,7 +71,7 @@
         </div>
       </div>
     </div>
-      </div>   
+      <!-- </div>    -->
     </div>
   <!-- </div> -->
   </div>

@@ -49,6 +49,14 @@ jack : number = 0
   public doughnutChartType:string = 'doughnut';
 
 
+  public doughnutChartLabel:string[] = ['Personal Observation', 'Article', 'Interview', 'Story', 'Publication'];
+  public doughnutChartDat :number[] = [30, 10, 4,3, 10];
+  public doughnutChartTyp:string = 'doughnut';
+
+
+  public doughnutChartLabe:string[] = ['In Danger', 'High', 'Almost Extinct'];
+  public doughnutChartDa :number[] = [1, 5, 10];
+  public doughnutChartTy:string = 'doughnut';
 
   // events
   public chartClicked(e:any):void {
