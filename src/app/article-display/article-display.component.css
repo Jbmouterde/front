@@ -387,6 +387,7 @@ img {
 .button1{
   /* float: left; */
   position: relative;
+  margin-top : 5px;
     background-color: darkgrey;
     border-radius : 50%;
     font-size: 28px;
