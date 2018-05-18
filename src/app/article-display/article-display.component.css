@@ -238,8 +238,9 @@ figure {
  text-align : center; 
   /* display: flex; */
   overflow: scroll;
-
 } 
+
+
 .titre{
   font-size : 100px;
   color : #28a745; 
@@ -247,7 +248,7 @@ figure {
 }
 .para{
   /* text-shadow: 1px 1px 1px #28a745; */
-  color :  white;
+  color :  rgba(255, 255, 255, 0.89);
   font-size: 1.2em; 
   margin-top : 20px
 
