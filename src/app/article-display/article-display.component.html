@@ -113,62 +113,86 @@
   </div>
   <!-- reports display -->
 
-  <div class="col-4">
-    <hr>
-    <p> Search by Species </p>
-    
-       <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Mammals')" (click)="toggleDescriptionClass()"> 🐼 </button>
- 
-             <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Reptiles')" (click)="toggleDescriptionClass2()"> 🦎 </button>
-        
-             <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Birds')" (click)="toggleDescriptionClass3()">  🕊   </button>
-          
-           
-             <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Insects')" (click)="toggleDescriptionClass4()"> 🕷    </button>
-          
-           
-             <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Aquatic Animals')" (click)="toggleDescriptionClass5()"> 🐳 </button>
-        
-             <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Other')"> Other </button>
-<hr>
-             <p> Search by level of Danger </p>
-             <button class="btn btn-outline-success" (click)="setDangerFilter('In Danger')"> In Danger     </button>
-           
-             <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
-             <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button>
-             <hr> 
-             <div class="container">
 
-             <div class="row">
-             <div class="circle col">
-               <br>
-               <br>
-            <p> Species in Danger <br> </p><div class="chfi">{{a}}</div>
-          </div>
-            <div [ngClass]="classState" class="see-more col chfi">
-                <p> Mammals :  {{b}}</p>
-              
-              </div>
-              <div [ngClass]="classState2" class="see-more col chfi">
-                <p> Reptiles :  {{c}} </p>
-              
-              </div>
-              <div [ngClass]="classState3" class="see-more col chfi">
-                <p> Birds :  {{f}} </p>
-              
-              </div>
-              <div [ngClass]="classState4" class="see-more col chfi">
-                <p> Insects :  {{e}} </p>
-              
-              </div>
-              <div [ngClass]="classState5" class="see-more col chfi">
-                <p> Aquatic Animals :  {{d}} </p>
-              
-              </div>
-</div>
-</div>
-<!--  -->
-    </div>
+  
+
+    <div class="col-4">
+      <p> Filter Species </p>
+      <hr>
+      
+      <br>
+      <nav class="menu">
+        <div class="container">
+          <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+          <label class="menu-open-button" for="menu-open">
+         
+            <span id="filter" class="lines line-1">Filter Species</span>
+           
+         </label>
+       
+          <a (click)="setSpeciesFilter('Mammals')" (click)="toggleDescriptionClass()" class="menu-item blue"> 🐼 </a>
+          <a (click)="setSpeciesFilter('Reptiles')" (click)="toggleDescriptionClass2()" class="menu-item green"> 🦎  </a>
+          <a (click)="setSpeciesFilter('Other')" class="menu-item lightblue"> Other </a>
+          <a (click)="setSpeciesFilter('Birds')" (click)="toggleDescriptionClass3()" class="menu-item red"> 🕊 </a>
+          <a (click)="setSpeciesFilter('Insects')" (click)="toggleDescriptionClass4()" class="menu-item purple"> 🕷  </a>
+          <a (click)="setSpeciesFilter('Aquatic Animals')" (click)="toggleDescriptionClass5()" class="menu-item orange"> 🐳 </a>
+          
+        </div>
+       </nav>
+      
+         <!-- <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Mammals')" (click)="toggleDescriptionClass()"> 🐼 </button>
+   
+               <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Reptiles')" (click)="toggleDescriptionClass2()"> 🦎 </button>
+          
+               <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Birds')" (click)="toggleDescriptionClass3()">  🕊   </button>
+            
+             
+               <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Insects')" (click)="toggleDescriptionClass4()"> 🕷    </button>
+            
+             
+               <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Aquatic Animals')" (click)="toggleDescriptionClass5()"> 🐳 </button>
+          
+               <button class="btn btni btn-outline-success byspe" (click)="setSpeciesFilter('Other')"> Other </button> -->
+
+               <!-- <p> Search by level of Danger </p>
+               <button class="btn btn-outline-success" (click)="setDangerFilter('In Danger')"> In Danger     </button>
+             
+               <button class="btn btn-outline-success" (click)="setDangerFilter('Real Danger')"> Real Danger </button>
+               <button class="btn btn-outline-success" (click)="setDangerFilter('Almost Extinct')"> Almost Extinct </button> -->
+          
+               <div class="container stats">
+  
+               <div class="row">
+               <div class="circle col">
+                 <br>
+                 <br>
+              <p> Species in Danger <br> </p><div class="chfi">{{a}}</div>
+            </div>
+              <div [ngClass]="classState" class="see-more col chfi">
+                  <p> Mammals :  {{b}}</p>
+                
+                </div>
+                <div [ngClass]="classState2" class="see-more col chfi">
+                  <p> Reptiles :  {{c}} </p>
+                
+                </div>
+                <div [ngClass]="classState3" class="see-more col chfi">
+                  <p> Birds :  {{f}} </p>
+                
+                </div>
+                <div [ngClass]="classState4" class="see-more col chfi">
+                  <p> Insects :  {{e}} </p>
+                
+                </div>
+                <div [ngClass]="classState5" class="see-more col chfi">
+                  <p> Aquatic Animals :  {{d}} </p>
+                
+                </div>
+  </div>
+  </div>
+  <!--  -->
+      </div>
+  
         <!-- <div class="reports-container">
           
           
